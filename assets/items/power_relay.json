@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:power_relay",
+  "name": "sloupová rozvodka",
+  "texture": "power_relay",
+  "kind": "Block",
+  "block": "tesseris:power_relay",
+  "maxStack": 64
+}

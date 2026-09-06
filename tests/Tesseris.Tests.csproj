@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Tesseris.Tests</RootNamespace>
+    <AssemblyName>Tesseris.Tests</AssemblyName>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.8.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Standalone IL fixtures are built by CoreModTransformationTests, not into Tesseris.Tests. -->
+    <Compile Remove="Fixtures\PatchTarget\**\*.cs" />
+  </ItemGroup>
+
+  <!--
+    Reference na Game je tu kvůli testům formátování řádků overlaye. Ty hlídají, že se čísla
+    sázejí invariantní kulturou — na cs-CZ stroji by jinak "1.5" vyšlo jako "1,5" a text by
+    přestal odpovídat zadanému tvaru.
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\src\Engine\Engine.csproj" />
+    <ProjectReference Include="..\src\Game\Game.csproj" />
+    <ProjectReference Include="..\src\Loader.Abstractions\Tesseris.Loader.Abstractions.csproj" />
+    <ProjectReference Include="..\src\Loader.Transforms\Tesseris.Loader.Transforms.csproj" />
+    <ProjectReference Include="..\src\Loader\Tesseris.Loader.csproj" />
+    <ProjectReference Include="..\src\Launcher\Tesseris.Launcher.csproj" />
+    <ProjectReference Include="..\src\ModApi\Tesseris.ModApi.csproj" />
+  </ItemGroup>
+
+</Project>

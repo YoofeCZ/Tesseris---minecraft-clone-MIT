@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:mud_bricks",
+  "texture": "mud_bricks",
+  "material": "Soil",
+  "requiredTier": "Flint",
+  "hardness": 1,
+  "chiselable": true,
+  "opaque": true
+}

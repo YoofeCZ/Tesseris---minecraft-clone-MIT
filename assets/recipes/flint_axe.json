@@ -1,0 +1,10 @@
+{
+  "id": "flint_axe",
+  "output": "tesseris:flint_axe",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:flint", "count": 3 },
+    { "item": "tesseris:stick", "count": 2 }
+  ]
+}

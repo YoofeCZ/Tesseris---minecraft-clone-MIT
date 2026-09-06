@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:stone_sword",
+  "name": "mec",
+  "texture": "re_stone_sword_texture",
+  "iconTexture": "stone_sword",
+  "kind": "Tool",
+  "tool": "None",
+  "tier": "Stone",
+  "durability": 131,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "stone_sword"
+}

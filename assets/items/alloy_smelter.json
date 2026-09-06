@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:alloy_smelter",
+  "name": "slévárna slitin",
+  "iconTexture": "hypro_alloy_smelter_icon",
+  "kind": "Block",
+  "block": "tesseris:alloy_smelter"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:wolf_pelt",
+  "name": "vlčí kožešina",
+  "texture": "wolf_pelt",
+  "kind": "Material",
+  "maxStack": 64,
+  "burnSeconds": 2
+}

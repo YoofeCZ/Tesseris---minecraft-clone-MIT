@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:diamond_ore",
+  "name": "diamantová ruda",
+  "texture": "diamond_ore",
+  "kind": "Block",
+  "block": "tesseris:diamond_ore",
+  "maxStack": 64
+}

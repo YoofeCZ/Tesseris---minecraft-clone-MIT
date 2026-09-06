@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:surface_cable_blue",
+  "name": "modrý povrchový kabel",
+  "texture": "surface_cable_blue",
+  "kind": "Material",
+  "maxStack": 64
+}

@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:copper_ore",
+  "texture": "copper_ore",
+  "material": "Stone",
+  "requiredTier": "Stone",
+  "hardness": 3.0,
+  "dropItem": "tesseris:raw_copper",
+  "chiselable": true,
+  "opaque": true
+}

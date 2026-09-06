@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:quarry",
+  "texture": "hypro_quarry",
+  "shape": "HytaleModel",
+  "model": "hytale/quarry",
+  "modelTextureWidth": 64,
+  "modelTextureHeight": 64,
+  "material": "Stone",
+  "hardness": 4.0,
+  "chiselable": false,
+  "opaque": true
+}

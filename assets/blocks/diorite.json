@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:diorite",
+  "texture": "diorite",
+  "material": "Stone",
+  "hardness": 2,
+  "requiredTier": "Flint",
+  "chiselable": true,
+  "opaque": true
+}

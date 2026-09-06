@@ -1,0 +1,7 @@
+{
+  "id": "smelt_gold",
+  "type": "Smelting",
+  "output": "tesseris:gold_ingot",
+  "count": 1,
+  "inputs": [ { "item": "tesseris:raw_gold", "count": 1 } ]
+}

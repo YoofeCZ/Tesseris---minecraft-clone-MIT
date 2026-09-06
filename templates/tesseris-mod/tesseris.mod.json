@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "id": "example.mod",
+  "name": "Example Mod",
+  "version": "1.0.0",
+  "modApiVersion": "^2.0.0",
+  "loaderVersion": "^2.0.0",
+  "gameVersion": "*",
+  "entrypoints": [
+    {
+      "phase": "runtime",
+      "assembly": "TesserisMod.dll",
+      "type": "TesserisMod.Mod"
+    }
+  ],
+  "contentRoot": "content",
+  "trustedCode": true,
+  "capabilities": []
+}

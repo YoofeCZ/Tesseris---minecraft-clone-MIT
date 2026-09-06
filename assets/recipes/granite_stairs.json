@@ -1,0 +1,12 @@
+{
+  "id": "granite_stairs",
+  "output": "tesseris:granite_stairs",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:granite",
+      "count": 3
+    }
+  ]
+}

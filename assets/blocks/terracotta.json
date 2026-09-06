@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:terracotta",
+  "texture": "terracotta",
+  "material": "Stone",
+  "hardness": 1.2,
+  "chiselable": true,
+  "opaque": true
+}

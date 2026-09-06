@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:snow",
+  "texture": "snow",
+  "material": "Sand",
+  "hardness": 0.2,
+  "chiselable": true,
+  "opaque": true
+}

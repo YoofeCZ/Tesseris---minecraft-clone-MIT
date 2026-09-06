@@ -1,0 +1,11 @@
+{
+  "id": "diamond_helmet",
+  "output": "tesseris:diamond_helmet",
+  "count": 1,
+  "inputs": [
+    {
+      "item": "tesseris:diamond",
+      "count": 2
+    }
+  ]
+}

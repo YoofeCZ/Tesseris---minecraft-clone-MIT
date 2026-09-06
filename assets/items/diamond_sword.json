@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:diamond_sword",
+  "name": "mec",
+  "texture": "re_diamond_sword_texture",
+  "iconTexture": "diamond_sword",
+  "kind": "Tool",
+  "tool": "None",
+  "tier": "Diamond",
+  "durability": 1562,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "diamond_sword"
+}

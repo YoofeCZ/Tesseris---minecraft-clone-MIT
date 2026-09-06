@@ -1,0 +1,16 @@
+{
+  "id": "tesseris:birch_leaves",
+  "texture": "birch_leaves",
+  "material": "Wood",
+  "hardness": 0.2,
+  "chiselable": false,
+  "opaque": false,
+  "cutout": true,
+  "overhang": 0.45,
+  "shape": "Foliage",
+  "faces": {
+    "top": "birch_leaves",
+    "side": "birch_leaves_02",
+    "bottom": "birch_leaves_03"
+  }
+}

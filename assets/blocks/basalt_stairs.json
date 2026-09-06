@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:basalt_stairs",
+  "texture": "basalt",
+  "material": "Stone",
+  "hardness": 2.8,
+  "requiredTier": "Flint",
+  "pieces": 63,
+  "opaque": true,
+  "chiselable": false
+}

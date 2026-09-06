@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:glass",
+  "texture": "glass",
+  "material": "Glass",
+  "hardness": 0.3,
+  "chiselable": false,
+  "opaque": false
+}

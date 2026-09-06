@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:metal_press",
+  "texture": "hypro_metal_press",
+  "shape": "HytaleModel",
+  "model": "hytale/metal_press",
+  "modelTextureWidth": 256,
+  "modelTextureHeight": 256,
+  "material": "Stone",
+  "hardness": 3.5,
+  "chiselable": false,
+  "opaque": true
+}

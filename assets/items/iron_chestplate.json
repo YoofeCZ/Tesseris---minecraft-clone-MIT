@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:iron_chestplate",
+  "name": "železný kyrys",
+  "texture": "iron_chestplate",
+  "kind": "Armour",
+  "slot": "Chestplate",
+  "tier": "Iron",
+  "durability": 160,
+  "protection": 0.4,
+  "maxStack": 1
+}

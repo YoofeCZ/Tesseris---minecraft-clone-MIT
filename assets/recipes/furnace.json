@@ -1,0 +1,9 @@
+{
+  "id": "stone_furnace",
+  "output": "tesseris:stone_furnace",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:cobblestone", "count": 8 }
+  ]
+}

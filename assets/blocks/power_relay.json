@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:power_relay",
+  "texture": "power_relay",
+  "material": "Stone",
+  "hardness": 2.5,
+  "chiselable": false,
+  "opaque": true
+}

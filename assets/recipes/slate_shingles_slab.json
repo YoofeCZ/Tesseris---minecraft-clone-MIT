@@ -1,0 +1,12 @@
+{
+  "id": "slate_shingles_slab",
+  "output": "tesseris:slate_shingles_slab",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:slate_shingles",
+      "count": 1
+    }
+  ]
+}

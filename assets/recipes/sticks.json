@@ -1,0 +1,9 @@
+{
+  "id": "sticks",
+  "output": "tesseris:stick",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:planks", "count": 2 }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "basalt_slab",
+  "output": "tesseris:basalt_slab",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:basalt",
+      "count": 1
+    }
+  ]
+}

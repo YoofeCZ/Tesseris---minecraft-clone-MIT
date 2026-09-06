@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:torch",
+  "name": "pochodeň",
+  "iconTexture": "torch",
+  "kind": "Block",
+  "block": "tesseris:torch"
+}

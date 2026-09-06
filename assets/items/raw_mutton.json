@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:raw_mutton",
+  "name": "syrové skopové",
+  "texture": "raw_mutton",
+  "kind": "Material",
+  "maxStack": 64,
+  "burnSeconds": 0
+}

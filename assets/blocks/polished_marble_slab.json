@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:polished_marble_slab",
+  "texture": "polished_marble",
+  "material": "Stone",
+  "hardness": 2.4,
+  "requiredTier": "Flint",
+  "pieces": 15,
+  "opaque": true,
+  "chiselable": false
+}

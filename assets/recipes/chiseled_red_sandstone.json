@@ -1,0 +1,12 @@
+{
+  "id": "chiseled_red_sandstone",
+  "output": "tesseris:chiseled_red_sandstone",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:red_sand",
+      "count": 4
+    }
+  ]
+}

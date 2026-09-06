@@ -1,0 +1,12 @@
+{
+  "id": "slate_shingles_stairs",
+  "output": "tesseris:slate_shingles_stairs",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:slate_shingles",
+      "count": 3
+    }
+  ]
+}

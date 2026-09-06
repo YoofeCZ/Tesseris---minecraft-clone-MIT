@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <PackageId>Tesseris.ModSdk</PackageId>
+    <Version>2.0.1</Version>
+    <PackageVersion>2.0.1</PackageVersion>
+    <Title>Tesseris Mod SDK</Title>
+    <Description>Standalone build SDK and dotnet new template for managed Tesseris mods.</Description>
+    <Authors>Tesseris</Authors>
+    <PackageTags>tesseris;modding;sdk;template</PackageTags>
+    <PackageType>MSBuildSdk;Template</PackageType>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <IsPackable>true</IsPackable>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <Deterministic>true</Deterministic>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Tasks\Tesseris.ModSdk.Tasks.csproj"
+                      ReferenceOutputAssembly="false"
+                      PrivateAssets="all" />
+    <None Include="Sdk\Sdk.props" Pack="true" PackagePath="Sdk\Sdk.props" />
+    <None Include="Sdk\Sdk.targets" Pack="true" PackagePath="Sdk\Sdk.targets" />
+    <None Include="Tasks\bin\$(Configuration)\net8.0\Tesseris.ModSdk.Tasks.dll"
+          Pack="true"
+          PackagePath="tools\net8.0\Tesseris.ModSdk.Tasks.dll" />
+    <None Include="..\..\templates\tesseris-mod\**\*"
+          Pack="true"
+          PackagePath="content\tesseris-mod\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

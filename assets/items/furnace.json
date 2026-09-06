@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:furnace",
+  "name": "elektrická pec",
+  "iconTexture": "hypro_electric_furnace_icon",
+  "kind": "Block",
+  "block": "tesseris:furnace"
+}

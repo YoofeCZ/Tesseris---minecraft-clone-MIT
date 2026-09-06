@@ -1,0 +1,9 @@
+<Project Sdk="Tesseris.ModSdk/2.0.1">
+  <PropertyGroup>
+    <ModId>example.mod</ModId>
+    <ModName>Example Mod</ModName>
+    <ModVersion>1.0.0</ModVersion>
+    <ModApiVersion>^2.0.0</ModApiVersion>
+    <ModEntryType>TesserisMod.Mod</ModEntryType>
+  </PropertyGroup>
+</Project>

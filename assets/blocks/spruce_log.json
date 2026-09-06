@@ -1,0 +1,15 @@
+{
+  "id": "tesseris:spruce_log",
+  "texture": "spruce_log_side",
+  "faces": {
+    "top": "spruce_log_top",
+    "bottom": "spruce_log_top"
+  },
+  "material": "Wood",
+  "hardness": 1.2,
+  "chiselable": true,
+  "shape": "Post",
+  "opaque": true,
+  "burnSeconds": 30,
+  "burnResidue": "tesseris:charcoal"
+}

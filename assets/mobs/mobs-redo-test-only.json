@@ -1,0 +1,1067 @@
+{
+ "schemaVersion": 1,
+ "usage": "test-only",
+ "commercialDistributionAllowed": false,
+ "notice": "Exact upstream Mobs Redo companion media for development and visual testing. Mixed, NC and incompletely documented media must not ship commercially.",
+ "sources": {
+  "mobs_animal": {
+   "url": "https://codeberg.org/tenplus1/mobs_animal.git",
+   "commit": "a04c6c305e9c3d673945c65832c8ea680f7e6294"
+  },
+  "mobs_monster": {
+   "url": "https://codeberg.org/tenplus1/mobs_monster.git",
+   "commit": "e6fdf548e91d92f93bab9e8c2a74f4513d220d9b"
+  },
+  "mobs_redo": {
+   "url": "https://codeberg.org/tenplus1/mobs_redo.git",
+   "commit": "33c19b99fbd53090451c0b857c68e32430c95c3d"
+  }
+ },
+ "excluded": [
+  {
+   "name": "excluded acacia self-destructing Tree Monster variant",
+   "luaId": "mobs_monster:tree_monster",
+   "reason": "Explicit user exclusion. The variant has no separate Lua ID; its dedicated sixth Tree Monster skin and self-destructing behavior are intentionally absent."
+  },
+  {
+   "name": "Dungeon Master",
+   "luaId": "mobs_monster:dungeon_master",
+   "reason": "Odstraneno na prani autora hry — do Tesserisu se nehodi."
+  },
+  {
+   "name": "Land Guard",
+   "luaId": "mobs_monster:land_guard",
+   "reason": "Odstraneno na prani autora hry — do Tesserisu se nehodi."
+  },
+  {
+   "name": "Obsidian Flan",
+   "luaId": "mobs_monster:obsidian_flan",
+   "reason": "Odstraneno na prani autora hry — do Tesserisu se nehodi."
+  },
+  {
+   "name": "Mese Monster",
+   "luaId": "mobs_monster:mese_monster",
+   "reason": "Odstraneno na prani autora hry — do Tesserisu se nehodi."
+  },
+  {
+   "name": "Oerkki",
+   "luaId": "mobs_monster:oerkki",
+   "reason": "Odstraneno na prani autora hry — do Tesserisu se nehodi."
+  },
+  {
+   "name": "Tree Monster",
+   "luaId": "mobs_monster:tree_monster",
+   "reason": "Odstraneno na prani autora hry — do Tesserisu se nehodi."
+  }
+ ],
+ "mobs": [
+  {
+   "package": "mobs_animal",
+   "luaIds": [
+    "mobs_animal:bee"
+   ],
+   "name": "Bee",
+   "sourceLua": "bee.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_bee.b3d",
+    "sourceModel": "models/mobs_bee.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_bee.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      0,
+      30
+     ],
+     "walk": [
+      35,
+      65
+     ]
+    }
+   },
+   "ai": {
+    "class": "passive",
+    "traits": [
+     "slow-fall",
+     "capture"
+    ],
+    "walkSpeed": 1.0
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_bee.ogg"
+   ],
+   "license": {
+    "model": "MIT",
+    "textures": "CC0",
+    "audio": "WTFPL"
+   }
+  },
+  {
+   "package": "mobs_animal",
+   "luaIds": [
+    "mobs_animal:bunny"
+   ],
+   "name": "Bunny",
+   "sourceLua": "bunny.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_bunny.b3d",
+    "sourceModel": "models/mobs_bunny.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_bunny_grey.png",
+     "assets/textures/mobs_bunny_brown.png",
+     "assets/textures/mobs_bunny_white.png",
+     "assets/textures/mobs_bunny_evil.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1,
+      15
+     ],
+     "walk": [
+      16,
+      24
+     ],
+     "run": [
+      16,
+      24,
+      40
+     ],
+     "punch": [
+      16,
+      24
+     ]
+    }
+   },
+   "ai": {
+    "class": "passive-flee",
+    "traits": [
+     "biome-skin",
+     "tame",
+     "breed",
+     "evil-melee-conversion"
+    ],
+    "walkSpeed": 1.0,
+    "runSpeed": 2.0
+   },
+   "audio": [],
+   "license": {
+    "model": "CC0",
+    "textures": "CC0 except mobs_bunny_evil.png is not individually enumerated upstream",
+    "audio": "none"
+   }
+  },
+  {
+   "package": "mobs_animal",
+   "luaIds": [
+    "mobs_animal:chicken"
+   ],
+   "name": "Chicken",
+   "sourceLua": "chicken.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_chicken.b3d",
+    "sourceModel": "models/mobs_chicken.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_chicken.png",
+     "assets/textures/mobs_chicken_brown.png",
+     "assets/textures/mobs_chicken_black.png"
+    ],
+    "childTextures": [
+     "assets/textures/mobs_chick.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1,
+      30,
+      28
+     ],
+     "stand1": [
+      31,
+      70,
+      32
+     ],
+     "walk": [
+      71,
+      90,
+      24
+     ],
+     "run": [
+      91,
+      110,
+      34
+     ]
+    }
+   },
+   "ai": {
+    "class": "passive-flee",
+    "traits": [
+     "lays-eggs",
+     "tame",
+     "breed"
+    ],
+    "walkSpeed": 1.0,
+    "runSpeed": 3.0
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_chicken.ogg",
+    "assets/audio/mobs/mobs_chicken.1.ogg",
+    "assets/audio/mobs/mobs_chicken.2.ogg"
+   ],
+   "license": {
+    "model": "CC0",
+    "textures": "CC0",
+    "audio": "CC0"
+   }
+  },
+  {
+   "package": "mobs_animal",
+   "luaIds": [
+    "mobs_animal:cow"
+   ],
+   "name": "Cow",
+   "sourceLua": "cow.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_cow.b3d",
+    "sourceModel": "models/mobs_cow.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_cow.png",
+     "assets/textures/mobs_cow2.png"
+    ]
+   },
+   "animation": {
+    "fps": 20,
+    "clips": {
+     "replace": [
+      0,
+      30,
+      20
+     ],
+     "stand": [
+      35,
+      75,
+      20
+     ],
+     "walk": [
+      85,
+      114,
+      20
+     ],
+     "run": [
+      120,
+      140,
+      40
+     ],
+     "punch": [
+      145,
+      160,
+      20
+     ],
+     "die": [
+      165,
+      185,
+      25
+     ]
+    }
+   },
+   "ai": {
+    "class": "reactive-melee",
+    "traits": [
+     "graze",
+     "milk",
+     "tame",
+     "breed"
+    ],
+    "walkSpeed": 1.0,
+    "runSpeed": 2.0,
+    "damage": 4
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_cow.ogg"
+   ],
+   "license": {
+    "model": "CC0",
+    "textures": "CC0",
+    "audio": "CC0"
+   }
+  },
+  {
+   "package": "mobs_animal",
+   "luaIds": [
+    "mobs_animal:kitten"
+   ],
+   "name": "Kitten",
+   "sourceLua": "kitten.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_kitten.b3d",
+    "sourceModel": "models/mobs_kitten.b3d",
+    "scale": [
+     0.5,
+     0.5
+    ],
+    "textures": [
+     "assets/textures/mobs_kitten_striped.png",
+     "assets/textures/mobs_kitten_splotchy.png",
+     "assets/textures/mobs_kitten_ginger.png",
+     "assets/textures/mobs_kitten_sandy.png",
+     "assets/textures/mobs_kitten_black.png"
+    ]
+   },
+   "animation": {
+    "fps": 42,
+    "clips": {
+     "walk": [
+      0,
+      96
+     ],
+     "run": [
+      0,
+      96,
+      50
+     ],
+     "stand": [
+      97,
+      192
+     ]
+    }
+   },
+   "ai": {
+    "class": "animal-predator",
+    "traits": [
+     "targets-rat",
+     "tame",
+     "owner-order"
+    ],
+    "walkSpeed": 0.6,
+    "runSpeed": 2.0,
+    "damage": 1
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_kitten.ogg"
+   ],
+   "license": {
+    "model": "WTFPL",
+    "textures": "WTFPL except mobs_kitten_black.png is not individually enumerated upstream",
+    "audio": "CC0"
+   }
+  },
+  {
+   "package": "mobs_animal",
+   "luaIds": [
+    "mobs_animal:panda"
+   ],
+   "name": "Panda",
+   "sourceLua": "panda.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_panda.b3d",
+    "sourceModel": "models/mobs_panda.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_panda.png",
+     "assets/textures/mobs_panda_viking.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "rest": [
+      0,
+      0
+     ],
+     "coverEyes": [
+      1,
+      1
+     ],
+     "surprised": [
+      2,
+      2
+     ],
+     "walk": [
+      10,
+      70
+     ],
+     "run": [
+      10,
+      70,
+      60
+     ],
+     "punch": [
+      80,
+      120
+     ],
+     "stand": [
+      130,
+      270
+     ]
+    }
+   },
+   "ai": {
+    "class": "reactive-melee",
+    "traits": [
+     "owner-loyal",
+     "tame"
+    ],
+    "walkSpeed": 0.5,
+    "runSpeed": 1.5,
+    "damage": 3
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_panda.ogg"
+   ],
+   "license": {
+    "model": "CC BY-SA 3.0",
+    "textures": "CC BY-SA 3.0; viking skin CC0",
+    "audio": "CC0"
+   }
+  },
+  {
+   "package": "mobs_animal",
+   "luaIds": [
+    "mobs_animal:penguin"
+   ],
+   "name": "Penguin",
+   "sourceLua": "penguin.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_penguin.b3d",
+    "sourceModel": "models/mobs_penguin.b3d",
+    "scale": [
+     0.25,
+     0.25
+    ],
+    "textures": [
+     "assets/textures/mobs_penguin.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1,
+      20
+     ],
+     "walk": [
+      25,
+      45
+     ],
+     "slide": [
+      50,
+      70
+     ],
+     "swim": [
+      75,
+      95
+     ]
+    }
+   },
+   "ai": {
+    "class": "passive-swimmer",
+    "traits": [
+     "flee",
+     "tame"
+    ],
+    "walkSpeed": 1.0,
+    "runSpeed": 2.0
+   },
+   "audio": [],
+   "license": {
+    "model": "CC BY-SA 3.0",
+    "textures": "CC BY-SA 3.0",
+    "audio": "none"
+   }
+  },
+  {
+   "package": "mobs_animal",
+   "luaIds": [
+    "mobs_animal:rat"
+   ],
+   "name": "Rat",
+   "sourceLua": "rat.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_rat.b3d",
+    "sourceModel": "models/mobs_rat.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_rat.png",
+     "assets/textures/mobs_rat2.png",
+     "assets/textures/mobs_rat3.png"
+    ]
+   },
+   "animation": {
+    "fps": null,
+    "clips": {}
+   },
+   "ai": {
+    "class": "passive-flee",
+    "traits": [
+     "capture"
+    ],
+    "walkSpeed": 1.0,
+    "runSpeed": 2.0
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_rat.ogg"
+   ],
+   "license": {
+    "model": "WTFPL",
+    "textures": "WTFPL",
+    "audio": "WTFPL"
+   }
+  },
+  {
+   "package": "mobs_animal",
+   "luaIds": [
+    "mobs_animal:sheep_black",
+    "mobs_animal:sheep_blue",
+    "mobs_animal:sheep_brown",
+    "mobs_animal:sheep_cyan",
+    "mobs_animal:sheep_dark_green",
+    "mobs_animal:sheep_dark_grey",
+    "mobs_animal:sheep_green",
+    "mobs_animal:sheep_grey",
+    "mobs_animal:sheep_magenta",
+    "mobs_animal:sheep_orange",
+    "mobs_animal:sheep_pink",
+    "mobs_animal:sheep_red",
+    "mobs_animal:sheep_violet",
+    "mobs_animal:sheep_white",
+    "mobs_animal:sheep_yellow"
+   ],
+   "name": "Sheep",
+   "sourceLua": "sheep.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_sheep.b3d",
+    "sourceModel": "models/mobs_sheep.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_sheep_base.png",
+     "assets/textures/mobs_sheep_wool.png",
+     "assets/textures/mobs_sheep_horns.png",
+     "assets/textures/mobs_sheep_shaved.png"
+    ],
+    "textureModifier": "base ^ optional-horns ^ (wool-or-shaved ^[multiply:#RGBA)"
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      0,
+      80
+     ],
+     "walk": [
+      81,
+      100
+     ],
+     "run": [
+      81,
+      100,
+      40
+     ],
+     "die": [
+      1,
+      2,
+      1
+     ]
+    }
+   },
+   "ai": {
+    "class": "passive-grazer",
+    "traits": [
+     "flee",
+     "shear",
+     "wool-regrowth",
+     "horns",
+     "tame",
+     "breed"
+    ],
+    "walkSpeed": 1.0,
+    "runSpeed": 2.0
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_sheep.ogg"
+   ],
+   "license": {
+    "model": "WTFPL",
+    "textures": "CC BY-SA 4.0 NC",
+    "audio": "CC0"
+   }
+  },
+  {
+   "package": "mobs_animal",
+   "luaIds": [
+    "mobs_animal:pumba"
+   ],
+   "name": "Warthog",
+   "sourceLua": "warthog.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_pumba.b3d",
+    "sourceModel": "models/mobs_pumba.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_pumba.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      25,
+      55
+     ],
+     "walk": [
+      70,
+      100
+     ],
+     "run": [
+      70,
+      100,
+      40
+     ],
+     "punch": [
+      70,
+      100
+     ],
+     "die": [
+      1,
+      2,
+      1
+     ]
+    }
+   },
+   "ai": {
+    "class": "group-melee",
+    "traits": [
+     "owner-loyal",
+     "tame",
+     "breed"
+    ],
+    "walkSpeed": 2.0,
+    "runSpeed": 3.0,
+    "damage": 2
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_pig.ogg",
+    "assets/audio/mobs/mobs_pig_angry.ogg"
+   ],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "CC0"
+   }
+  },
+  {
+   "package": "mobs_monster",
+   "luaIds": [
+    "mobs_monster:dirt_monster"
+   ],
+   "name": "Dirt Monster",
+   "sourceLua": "dirt_monster.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_stone_monster.b3d",
+    "sourceModel": "models/mobs_stone_monster.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_dirt_monster.png",
+     "assets/textures/mobs_dirt_monster2.png",
+     "assets/textures/mobs_dirt_monster3.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      0,
+      14
+     ],
+     "walk": [
+      15,
+      38
+     ],
+     "run": [
+      40,
+      63,
+      45
+     ],
+     "punch": [
+      40,
+      63
+     ]
+    }
+   },
+   "ai": {
+    "class": "pathfinding-melee",
+    "traits": [
+     "sunlight-damage",
+     "biome-skin"
+    ],
+    "walkSpeed": 1.0,
+    "runSpeed": 3.0,
+    "damage": 2
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_dirtmonster.ogg"
+   ],
+   "license": {
+    "model": "WTFPL",
+    "textures": "WTFPL",
+    "audio": "WTFPL"
+   }
+  },
+  {
+   "package": "mobs_monster",
+   "luaIds": [
+    "mobs_monster:fire_spirit"
+   ],
+   "name": "Fire Spirit",
+   "sourceLua": "fire_spirit.lua",
+   "visual": {
+    "type": "sprite",
+    "model": null,
+    "scale": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "textures": [
+     "assets/textures/mobs_fire_spirit.png"
+    ]
+   },
+   "animation": {
+    "fps": null,
+    "clips": {}
+   },
+   "ai": {
+    "class": "pathfinding-melee",
+    "traits": [
+     "glow",
+     "particles",
+     "fire-immune",
+     "water-vulnerable"
+    ],
+    "walkSpeed": 2.0,
+    "runSpeed": 3.0,
+    "damage": 4
+   },
+   "audio": [],
+   "license": {
+    "model": "none",
+    "textures": "not individually enumerated upstream",
+    "audio": "external dependencies"
+   }
+  },
+  {
+   "package": "mobs_monster",
+   "luaIds": [
+    "mobs_monster:lava_flan"
+   ],
+   "name": "Lava Flan",
+   "sourceLua": "lava_flan.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_lava_flan.b3d",
+    "sourceModel": "models/zmobs_lava_flan.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_lava_flan.png",
+     "assets/textures/mobs_lava_flan2.png",
+     "assets/textures/mobs_lava_flan3.png"
+    ],
+    "sourceTextures": [
+     "textures/zmobs_lava_flan.png",
+     "textures/zmobs_lava_flan2.png",
+     "textures/zmobs_lava_flan3.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      0,
+      8
+     ],
+     "walk": [
+      10,
+      18
+     ],
+     "run": [
+      20,
+      28
+     ],
+     "punch": [
+      20,
+      28
+     ]
+    }
+   },
+   "ai": {
+    "class": "lava-swimming-melee",
+    "traits": [
+     "glow",
+     "lava-heal",
+     "water-solidify"
+    ],
+    "walkSpeed": 0.5,
+    "runSpeed": 2.0,
+    "damage": 3
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_lavaflan.ogg"
+   ],
+   "license": {
+    "model": "CC BY-SA 3.0",
+    "textures": "CC BY-SA 3.0",
+    "audio": "WTFPL"
+   }
+  },
+  {
+   "package": "mobs_monster",
+   "luaIds": [
+    "mobs_monster:sand_monster"
+   ],
+   "name": "Sand Monster",
+   "sourceLua": "sand_monster.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_sand_monster.b3d",
+    "sourceModel": "models/mobs_sand_monster.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_sand_monster.png",
+     "assets/textures/mobs_sand_monster2.png"
+    ],
+    "supportingTextures": [
+     "assets/textures/mobs_sand_particles.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      0,
+      39
+     ],
+     "walk": [
+      41,
+      72
+     ],
+     "run": [
+      74,
+      105,
+      45
+     ],
+     "punch": [
+      74,
+      105
+     ]
+    }
+   },
+   "ai": {
+    "class": "pathfinding-melee",
+    "traits": [
+     "shovel-vulnerability",
+     "death-particles"
+    ],
+    "walkSpeed": 1.5,
+    "runSpeed": 4.0,
+    "damage": 1
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_sandmonster.ogg"
+   ],
+   "license": {
+    "model": "WTFPL",
+    "textures": "main CC0; alternate WTFPL; particles not individually enumerated upstream",
+    "audio": "WTFPL"
+   }
+  },
+  {
+   "package": "mobs_monster",
+   "luaIds": [
+    "mobs_monster:spider"
+   ],
+   "name": "Spider",
+   "sourceLua": "spider.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_spider.b3d",
+    "sourceModel": "models/mobs_spider.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_spider_snowy.png",
+     "assets/textures/mobs_spider_orange.png",
+     "assets/textures/mobs_spider_grey.png",
+     "assets/textures/mobs_spider_mese.png",
+     "assets/textures/mobs_spider_crystal.png",
+     "assets/textures/mobs_spider_dark.png"
+    ],
+    "supportingTextures": [
+     "assets/textures/mobs_cobweb.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      0,
+      0
+     ],
+     "walk": [
+      1,
+      21
+     ],
+     "run": [
+      1,
+      21,
+      30
+     ],
+     "punch": [
+      25,
+      45,
+      30
+     ]
+    }
+   },
+   "ai": {
+    "class": "climbing-melee-ranged-variant",
+    "traits": [
+     "wall-climb",
+     "leap",
+     "biome-skin",
+     "web-projectile",
+     "small-cave-variant"
+    ],
+    "walkSpeed": 1.0,
+    "runSpeed": 3.0,
+    "damage": 3
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_spider.ogg"
+   ],
+   "license": {
+    "model": "CC BY-SA 3.0",
+    "textures": "CC BY-SA 3.0; dark variant edited upstream",
+    "audio": "WTFPL"
+   }
+  },
+  {
+   "package": "mobs_monster",
+   "luaIds": [
+    "mobs_monster:stone_monster"
+   ],
+   "name": "Stone Monster",
+   "sourceLua": "stone_monster.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/mobs_stone_monster.b3d",
+    "sourceModel": "models/mobs_stone_monster.b3d",
+    "scale": [
+     1.0,
+     1.0
+    ],
+    "textures": [
+     "assets/textures/mobs_stone_monster.png",
+     "assets/textures/mobs_stone_monster2.png",
+     "assets/textures/mobs_stone_monster3.png",
+     "assets/textures/mobs_stone_monster4.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      0,
+      14
+     ],
+     "walk": [
+      15,
+      38
+     ],
+     "run": [
+      40,
+      63,
+      40
+     ],
+     "punch": [
+      40,
+      63
+     ]
+    }
+   },
+   "ai": {
+    "class": "pathfinding-melee",
+    "traits": [
+     "biome-skin",
+     "pickaxe-vulnerability"
+    ],
+    "walkSpeed": 1.0,
+    "runSpeed": 2.0,
+    "damage": 3
+   },
+   "audio": [
+    "assets/audio/mobs/mobs_stonemonster.ogg"
+   ],
+   "license": {
+    "model": "WTFPL",
+    "textures": "mixed CC0, WTFPL and MIT",
+    "audio": "WTFPL"
+   }
+  }
+ ]
+}

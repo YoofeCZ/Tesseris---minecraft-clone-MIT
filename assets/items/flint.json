@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:flint",
+  "name": "pazourek",
+  "texture": "flint",
+  "kind": "Block",
+  "block": "tesseris:flint",
+  "tool": "None",
+  "tier": "None",
+  "durability": 0,
+  "maxStack": 64,
+  "burnSeconds": 0
+}

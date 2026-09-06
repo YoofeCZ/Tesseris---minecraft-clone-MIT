@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:lapis_lazuli",
+  "name": "lazurit",
+  "texture": "lapis_lazuli",
+  "kind": "Material",
+  "maxStack": 64
+}

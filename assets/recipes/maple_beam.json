@@ -1,0 +1,9 @@
+{
+  "id": "maple_beam",
+  "output": "tesseris:maple_beam",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:maple_log", "count": 2 }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "flint_shovel",
+  "output": "tesseris:flint_shovel",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:flint", "count": 1 },
+    { "item": "tesseris:stick", "count": 2 }
+  ]
+}

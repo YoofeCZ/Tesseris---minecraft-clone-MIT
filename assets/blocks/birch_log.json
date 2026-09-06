@@ -1,0 +1,15 @@
+{
+  "id": "tesseris:birch_log",
+  "texture": "birch_log_side",
+  "faces": {
+    "top": "birch_log_top",
+    "bottom": "birch_log_top"
+  },
+  "material": "Wood",
+  "hardness": 1.2,
+  "chiselable": true,
+  "shape": "Post",
+  "opaque": true,
+  "burnSeconds": 30,
+  "burnResidue": "tesseris:charcoal"
+}

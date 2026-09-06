@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:deepslate_bricks",
+  "texture": "deepslate_bricks",
+  "material": "Stone",
+  "hardness": 3.2,
+  "requiredTier": "Flint",
+  "chiselable": true,
+  "opaque": true
+}

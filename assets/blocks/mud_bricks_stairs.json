@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:mud_bricks_stairs",
+  "texture": "mud_bricks",
+  "material": "Soil",
+  "requiredTier": "Flint",
+  "hardness": 1,
+  "pieces": 63,
+  "opaque": true,
+  "chiselable": false
+}

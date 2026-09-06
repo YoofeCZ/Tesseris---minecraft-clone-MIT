@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:limestone",
+  "texture": "limestone",
+  "material": "Stone",
+  "hardness": 1.6,
+  "requiredTier": "Flint",
+  "chiselable": true,
+  "opaque": true
+}

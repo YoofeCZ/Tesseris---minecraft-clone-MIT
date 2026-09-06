@@ -1,0 +1,9 @@
+{
+  "id": "total_conversion:sky_compass",
+  "name": "Sky Compass",
+  "texture": "total_conversion:sky_stone",
+  "iconTexture": "total_conversion:sky_stone",
+  "kind": "Tool",
+  "maxStack": 1,
+  "model": "total_conversion:sky_compass"
+}

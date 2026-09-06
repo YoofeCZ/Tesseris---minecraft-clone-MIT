@@ -1,0 +1,11 @@
+<Project Sdk="Tesseris.ModSdk/2.0.1">
+  <PropertyGroup>
+    <AssemblyName>RubyWorldgen</AssemblyName>
+    <RootNamespace>RubyWorldgen</RootNamespace>
+    <ModId>ruby</ModId>
+    <ModName>Ruby Worldgen Example</ModName>
+    <ModVersion>1.0.0</ModVersion>
+    <ModApiVersion>^2.0.0</ModApiVersion>
+    <ModEntryType>RubyWorldgen.RubyMod</ModEntryType>
+  </PropertyGroup>
+</Project>

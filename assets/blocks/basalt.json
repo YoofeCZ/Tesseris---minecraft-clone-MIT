@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:basalt",
+  "texture": "basalt",
+  "material": "Stone",
+  "hardness": 2.8,
+  "requiredTier": "Flint",
+  "chiselable": true,
+  "opaque": true
+}

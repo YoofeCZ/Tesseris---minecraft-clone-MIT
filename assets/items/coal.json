@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:coal",
+  "name": "uhlí",
+  "texture": "coal",
+  "kind": "Material",
+  "tool": "None",
+  "tier": "None",
+  "durability": 0,
+  "maxStack": 64,
+  "burnSeconds": 80
+}

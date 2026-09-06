@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:copper_ingot",
+  "name": "měděný ingot",
+  "texture": "copper_ingot",
+  "kind": "Material",
+  "maxStack": 64
+}

@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:acacia_wood",
+  "texture": "acacia_log_side",
+  "material": "Wood",
+  "hardness": 1.2,
+  "chiselable": true,
+  "opaque": true,
+  "burnSeconds": 30,
+  "burnResidue": "tesseris:charcoal"
+}

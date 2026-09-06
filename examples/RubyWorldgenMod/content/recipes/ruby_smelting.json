@@ -1,0 +1,8 @@
+{
+  "output": "ruby",
+  "count": 1,
+  "smelting": true,
+  "inputs": [
+    { "item": "ruby_ore", "count": 1 }
+  ]
+}

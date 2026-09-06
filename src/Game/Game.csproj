@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Tesseris.Game</RootNamespace>
+    <AssemblyName>Tesseris</AssemblyName>
+
+    <!--
+      Vulkan se bez ukazatelu volat neda - push konstanty, vazby bufferu i vytvoreni
+      surface chteji ukazatel. Puvodni zduvodneni v Directory.Build.props ("nepotrebujeme,
+      GL prebira pole") platilo pro OpenGL a portem na Vulkan prestalo platit.
+    -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <!--
+      Serverový GC. Hra alokuje z jedenácti worker vláken naráz (generování a meshing),
+      a výchozí workstation GC na to má jedinou haldu, takže se vlákna o ni perou a úklid
+      přijde často.
+
+      Naměřeno A/B na témž buildu, dva běhy od každého:
+        workstation : gen0 20-23, p95 5,5-6,2 ms, p99 17,2-20,2 ms, 14-15 framů nad rozpočtem
+        server      : gen0  2-3,  p95 2,2-3,0 ms, p99 13,8-17,7 ms,  6-14 framů nad rozpočtem
+
+      Proč to hraje roli právě u nás: čekání na grafiku je P/Invoke (vkWaitForFences)
+      a návrat z nativního volání musí počkat, až úklid doběhne. Pauza GC se tím schová
+      do "čekání na GPU" a vypadá jako zádrhel grafiky, i když je to halda.
+
+      Daň je vyšší spotřeba paměti, protože serverový GC drží haldu na každé jádro.
+    -->
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.csproj" />
+    <ProjectReference Include="..\Loader\Tesseris.Loader.csproj" />
+    <ProjectReference Include="..\ModApi\Tesseris.ModApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Pure managed Lua 5.2-compatible runtime used by the Luanti compatibility layer. -->
+    <PackageReference Include="MoonSharp" Version="2.0.0" />
+  </ItemGroup>
+
+  <!-- Parsování argumentů je vnitřní věc spustitelného projektu, ale testuje se. -->
+  <ItemGroup>
+    <InternalsVisibleTo Include="Tesseris.Tests" />
+  </ItemGroup>
+
+  <!-- Definice bloků a textury se kopírují vedle binárky, registry je hledá přes AppContext.BaseDirectory. -->
+  <ItemGroup>
+    <None Include="..\..\assets\**\*.*">
+      <Link>assets\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\README.md">
+      <Link>README.md</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\LICENSE">
+      <Link>LICENSE</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!--
+    Nativní knihovny vedle binárky, aby je našel P/Invoke. Vzor schválně nic nevynucuje:
+    když soubor chybí, build projde a hra se spustí bez zvuku. Aktuálně soloud_x64.dll
+    dodaná není — viz docs/PROGRESS.md.
+  -->
+  <ItemGroup>
+    <None Include="..\..\native\*.dll">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:birch_sapling",
+  "name": "bĹ™ezovĂˇ sazenice",
+  "texture": "birch_sapling",
+  "kind": "Block",
+  "block": "tesseris:birch_sapling",
+  "maxStack": 64,
+  "burnSeconds": 5
+}

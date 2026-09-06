@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:solar_panel",
+  "name": "solární panel",
+  "iconTexture": "hypro_solar_panel_icon",
+  "kind": "Block",
+  "block": "tesseris:solar_panel"
+}

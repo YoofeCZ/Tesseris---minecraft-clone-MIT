@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Tesseris",
+  "classifications": ["Tesseris", "Mod", "Games"],
+  "identity": "Tesseris.ModSdk.ManagedMod.CSharp",
+  "name": "Tesseris managed mod",
+  "shortName": "tesseris-mod",
+  "sourceName": "TesserisMod",
+  "preferNameDirectory": true,
+  "symbols": {
+    "mod-id": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "example.mod",
+      "description": "Lowercase stable mod identifier.",
+      "replaces": "example.mod"
+    },
+    "mod-name": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Example Mod",
+      "description": "Display name of the mod.",
+      "replaces": "Example Mod"
+    }
+  }
+}

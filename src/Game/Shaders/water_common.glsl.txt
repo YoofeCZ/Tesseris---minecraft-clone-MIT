@@ -1,0 +1,230 @@
+POZOR: tenhle soubor se NEPREKLADA a schvalne nema priponu .frag.
+
+Je to jediny zdroj pravdy pro blok kodu, ktery musi byt SHODNY ve trech fragment
+shaderech: chunk_opaque.frag, chunk.frag a far.frag (far.frag nema caustics, viz nize).
+Preklad bezi bez prepinace -I, takze se hlavicka sdilet neda a kod se opravdu musi
+zkopirovat. Kdyz se meni tady, musi se prepsat na vsech mistech.
+
+Barvu WaterScatter a AbsorptionRatio navic pouzivaji jeste water.frag a sky.frag —
+tam uz jen jako konstanty, ne cely blok.
+
+Proc se nezavedl -I: pridat include cestu do MSBuild cile je snadne, ale nasledky uz ne.
+glslangValidator by pak mel dva druhy vstupnich souboru a glob v Directory.Build.targets
+by musel umet rozlisit, ktery soubor je prelozitelny stupen a ktery jen hlavicka.
+
+---------------------------------------------------------------------------------------
+
+// JEDNA barva vody, ne tri. Prechod od tyrkysove melciny k tmave hloubce vypadne ze
+// spektralniho utlumu sam — michat pres to jeste druhou barvu znamenalo zapocitat tyz
+const vec3 WaterScatter = vec3(0.13, 0.34, 0.44);
+
+// Tvar absorpcniho spektra ciste vody. Cervena mizi zhruba petkrat rychleji nez modra
+// a prave tenhle NEPOMER dela podvodni svet modrozelenym misto sedym.
+const vec3 AbsorptionRatio = vec3(2.17, 0.71, 0.46);
+
+// CAUSTICS PRES ITERATIVNI OHYBANI SOURADNIC.
+//
+// Dva slepe smery, ktere tomuhle predchazely, stoji za zapsani, aby se do nich uz nikdo
+// nevracel:
+//
+//   1. Soucet Laplacianu ctyr vln hladiny. Fyzikalne poctive, ale soucet hladkych sinusovek
+//      dava hladky vysledek — jemne zvlneni jasu, zadny vzor.
+//   2. Voronoi a vzdalenost k hranici mezi bunkami. Dalo to sit, ale SOUVISLOU: vypadalo to
+//      jako popraskana hlina nebo zelvi krunyr. Skutecne kaustiky jsou ODDELENE mekke
+//      skvrny, ktere se nedotykaji, a spojitost je vada Voronoi z principu — kazda bunka
+//      sousedi s dalsi, takze hranice musi tvorit souvislou sit. Ladenim sirky ani jasu
+//      to neslo odstranit.
+//
+// Tenhle postup v kazdem kroku OHNE souradnice podle sebe sama a pricte prevracenou
+// vzdalenost k ohnisku. Svetlo se hromadi v izolovanych singularitach, ktere spolu zadne
+// hrany nemaji — a to davaji skvrny misto site.
+//
+// PUVOD A SVOLENI: Shadertoy MdlXz8 od Dave_Hoskinse. Autor v popisu uvadi, ze shader nasel
+// na GLSL Sandboxu, upravil ho a udelal tile-able. Na verejny dotaz, jestli smi byt pouzity
+// v MIT projektu, 15. 6. 2026 odpovedel "Yes you can use it" — vzorec je proto prevzaty
+// VERNE. Meni se jen vstup (world-space misto UV) a napojeni na utlum.
+//
+// Mezikrok, ktery tady byl predtim, stoji za zapsani: vlastni prepis s jednou konstantou
+// misto p.x a p.y. Fungoval, ale rusil DROBNOU ASYMETRII MEZI OSAMI — x jde pres sin, y pres
+// cos a kazda se deli mirne jinou hodnotou. Prave ta asymetrie dela vzor neusporadanym,
+// takze prepis vypadal pravidelneji nez originál.
+const float CausticTau = 6.28318530718;
+const float CausticIntensity = 0.005;
+
+// JEDNA VRSTVA VZORU. Mod na prvnim radku z nej dela DLAZDICI — originál to nevadi, protoze
+// na Shadertoy je videt jedina dlazdice pres celou obrazovku, ale u nas se opakuje kazdych
+// par bloku. Proto se v Caustics skladaji dve tyhle vrstvy.
+float CausticLayer(vec2 uv, float time)
+{
+    vec2 q = mod(uv * CausticTau, CausticTau) - 250.0;
+    vec2 i = q;
+
+    // Posun o 23 je z originalu: v case nula uz ma vzor rozvinuty tvar misto rozjezdu.
+    float base = (time * 0.5) + 23.0;
+    float c = 1.0;
+
+    for (int n = 0; n < 5; n++)
+    {
+        // CAS SE MENI S KAZDOU ITERACI, a to je zasadni.
+        //
+        // Prvni prepis tady mel jedno t spocitane pred smyckou a vzor vychazel VYRAZNE chudsi
+        // a pravidelnejsi, protoze vsechny iterace bezely synchronne. Originál pro n = 0 dava
+        // -2,5 nasobek casu, pro n = 1 uz jen -0,75 — kazda vrstva ohybu se hybe jinou
+        // rychlostí a az z toho vznikne ten neusporadany pohyb.
+        float t = base * (1.0 - (3.5 / float(n + 1)));
+
+        // Kazdy krok ohne souradnice podle sebe sama — proto vysledek nema pravidelnou mrizku.
+        i = q + vec2(cos(t - i.x) + sin(t + i.y), sin(t - i.y) + cos(t + i.x));
+
+        // Prevracena vzdalenost k ohnisku: kde se jmenovatel blizi nule, jde hodnota prudce
+        // nahoru a vznikaji izolovane singularity misto spojitych hran. Tohle je duvod, proc
+        // vyjdou ODDELENE skvrny a ne souvisla sit, jakou daval Voronoi.
+        c += 1.0 / length(vec2(q.x / (sin(i.x + t) / CausticIntensity),
+                               q.y / (cos(i.y + t) / CausticIntensity)));
+    }
+
+    c /= 5.0;
+    c = 1.17 - pow(c, 1.4);
+
+    // Osma mocnina oddeli skvrny od pozadi. Bez ni je z toho sedy sum pres celou plochu.
+    return pow(abs(c), 8.0);
+}
+
+// VRACI BARVU, ne jedno cislo — kaustiky nejsou bile.
+//
+// Svetlo, ktere se na dno dostalo, uz proslo kusem vody, takze mu chybi cervena a je
+// namodrale zelene. Shader "Beneath the Sea" (4ljXWh), ktery tentyz vzorec pouziva, to resi
+// zisk jasu obarvi. Ciste bila pusobila prepalene i po ztlumeni — nesla poznat od primeho
+// slunce na suchu.
+vec3 Caustics(vec2 p, float time, float depth, float distance)
+{
+    float focus = (1.0 - exp(-depth * 0.35)) * exp(-depth * 0.055);
+    float fade = exp(-distance * 0.012);
+
+    float strength = focus * fade;
+
+    // Tlumeni se pocita DRIV nez vzor. Pet iteraci stoji dvacet goniometrickych funkci na
+    // fragment a podminka "pod urovni more" plati pro velkou cast sveta — bez tehle zkratky
+    // by se pocitaly i tam, kde se vysledek stejne vynasobi skoro nulou.
+    if (strength < 0.004)
+    {
+        return vec3(1.0);
+    }
+
+    // DVE VRSTVY, ABY NEBYLA VIDET DLAZDICE.
+    //
+    // Meritko je prevracena delka dlazdice: 0,11 znamena devet bloku, 0,079 necelych trinact.
+    // Postup velikosti stoji za zapsani — 0,04 (petadvacet bloku) bylo tak velike, ze z toho
+    // bylo nasviceni cele zatoky misto kaustik; po zmenseni na 0,11 zase zacala byt videt
+    // TAPETA, protoze pres obrazovku bylo najednou nekolik desitek stejnych dlazdic.
+    //
+    // Druha vrstva to rozbije dvema vecmi najednou:
+    //
+    //   * nesouměřitelnym meritkem, takze spolecna perioda obou je delsi nez dohled,
+    //   * natocenim zhruba o padesat stupnu, takze mrizky nejsou rovnobezne.
+    //
+    // Rozdilna rychlost casu (0,55 a 0,43) brani tomu, aby se obe pohybovaly svorne.
+    vec2 turned = vec2((p.x * 0.6235) - (p.y * 0.7818),
+                       (p.x * 0.7818) + (p.y * 0.6235));
+
+    float first = CausticLayer(p * 0.11, time * 0.55);
+    float second = CausticLayer(turned * 0.079, (time * 0.43) + 7.3);
+
+    // Maximum, ne soucet: kde se vrstvy potkaji, ma zustat jasna skvrna, ne vypaleny bily flek.
+    float light = max(first, second);
+
+    vec3 tint = vec3(0.62, 0.94, 1.0);
+
+    // Kaustiky jen PRIDAVAJI svetlo, neubiraji ho. Sila je zamerne nizka: 1,6 vytahlo pisek
+    // i kamen do saturace, skutecne kaustiky podklad jen prosvetli.
+    return vec3(1.0) + (light * strength * 0.55 * tint);
+}
+
+float UnderwaterPath(float distance)
+{
+    float sea = pc.water.x;
+    float cameraY = pc.cameraAndFogStart.y;
+
+    // KAMERA SE POCITA ZA PONORENOU UZ KOUSEK NAD HLADINOU.
+    //
+    // Objektiv neni bod. Kdyz je stred kamery presne na urovni vody, spodni pulka obrazu uz
+    // je pod hladinou — prepnuti presne na nule proto prichazi POZDE a hrac po krk ve vode
+    // vidi svet kolem sebe porad jako suchy.
+    //
+    // Hodnota musi byt STEJNA ve vsech shaderech vcetne water.frag, jinak se hladina prepne
+    // driv nez teren pod ni a na okamzik nesedi.
+    bool cameraUnder = cameraY <= (sea + 0.3);
+    bool fragmentUnder = vWorld.y <= sea;
+
+    if (cameraUnder == fragmentUnder)
+    {
+        return cameraUnder ? distance : 0.0;
+    }
+
+    float span = vWorld.y - cameraY;
+    float toSurface = abs(span) < 1e-4 ? 0.0 : clamp((sea - cameraY) / span, 0.0, 1.0);
+
+    float path = distance * (cameraUnder ? toSurface : 1.0 - toSurface);
+
+    // MINIMALNI DRAHA VODOU. Tohle je jadro problemu s "pruhem kostek na hladine" a stalo
+    // to tri pokusy, tak at je jasne proc.
+    //
+    // Kdyz je kamera TESNE pod hladinou, vyjde (sea - cameraY) skoro nula, takze toSurface
+    // je treba 0,01 a draha vodou k plazi dve ste bloku daleko je DVA BLOKY. Voda ji tedy
+    // skoro neobarvi a plaz zustane jasne zluta a ostra uprostred jinak modre sceny.
+    // Fyzikalne to sedi (oko je pod hladinou jen tenkou vrstvickou), ale vypada to jako
+    // chyba vykreslovani — a protoze se kamera u hladiny pohybuje porad, pruh naskakuje.
+    //
+    // SLEPA ULICKA, KTERA TOMU PREDCHAZELA: bylo tu Snellovo okno, ktere drahu omezovalo
+    // SHORA na 1,51 nasobku hloubky. To slo presne opacnym smerem a pruh jeste zhorsovalo.
+    // Dvakrat se zkousela jeho spodni hranice (5 a pak 22 bloku), nez bylo jasne, ze
+    // problem neni v hornim omezeni, ale v tom, ze chybi DOLNI.
+    //
+    // Dvacet bloku je tolik, aby plaz zmodrala jako zbytek sceny, a zaroven ne tolik, aby
+    // zmizely siluety pevniny na obzoru.
+    return max(path, min(distance, 20.0));
+}
+
+vec3 ApplyWater(vec3 color, float path, float depthBelowSurface)
+{
+    vec3 transmittance = exp(-AbsorptionRatio * pc.water.z * path);
+    vec3 downwelling = exp(-AbsorptionRatio * pc.water.y * max(depthBelowSurface, 0.0));
+
+    // Rozptylena voda se utlumuje hloubkou V PULCE DRAHY, ne hloubkou fragmentu. Svetlo,
+    // ktere se do oka rozptyli, prislo shora nekde mezi okem a fragmentem — podle fragmentu
+    // by dalka ztmavla do cerna misto do modra.
+    float cameraDepth = max(0.0, pc.water.x - pc.cameraAndFogStart.y);
+    float middle = mix(depthBelowSurface, cameraDepth, 0.5);
+
+    vec3 scattered = WaterScatter * exp(-AbsorptionRatio * pc.water.y * middle);
+
+    // ZKOUSELY SE TU SACHTY SVETLA A JSOU PRYC. Zapsano, aby se nezkousely znovu stejne.
+    //
+    // Myslenka byla spravna: rozptylena voda neni v celem objemu stejne jasna, protoze
+    // hladina svetlo sbiha do sloupu — je to tentyz jev jako kaustiky na dne, jen viditelny
+    // v objemu misto na plose.
+    //
+    // Provedeni ale bylo hrube: JEDEN vzorek vzoru v pulce drahy, kterym se nasobilo
+    // rozptylene svetlo (scattered *= 0.78 + shaft * 1.5). Pri pohledu shora z toho pres
+    // cele dno lezely svetle vlnite pruhy, ktere pusobily jako mastny film na hladine,
+    // ne jako svetlo v objemu.
+    //
+    // Poradne se to musi integrovat PODEL paprsku — nekolik vzorku mezi okem a fragmentem.
+    // Jeden bod nema hloubku, takze z nej vzdycky bude jen dalsi vzor natazeny pres plochu,
+    // at se ladi jakkoli.
+    return (color * downwelling * transmittance) + (scattered * (1.0 - transmittance));
+}
+
+// A v main(), hned po slozeni barvy z textury (far.frag tuhle cast NEMA — jeho dlazdice
+// zacinaji stovky bloku daleko, kde by sit mela na pixel nekolik ok a byl by z ni sum):
+
+    float depthBelow = max(0.0, pc.water.x - vWorld.y);
+
+    if (depthBelow > 0.0)
+    {
+        float upward = clamp(vShade, 0.0, 1.0);
+        color *= mix(vec3(1.0), Caustics(vWorld.xz, pc.water.w, depthBelow, vDistance), upward);
+    }
+
+    float waterPath = UnderwaterPath(vDistance);
+    color = ApplyWater(color, waterPath, depthBelow);

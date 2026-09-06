@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:cut_sandstone",
+  "texture": "cut_sandstone",
+  "material": "Stone",
+  "requiredTier": "Flint",
+  "hardness": 0.8,
+  "chiselable": true,
+  "opaque": true
+}

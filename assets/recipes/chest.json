@@ -1,0 +1,7 @@
+{
+  "id": "chest",
+  "output": "tesseris:chest",
+  "count": 1,
+  "smelting": false,
+  "inputs": [ { "item": "tesseris:planks", "count": 8 } ]
+}

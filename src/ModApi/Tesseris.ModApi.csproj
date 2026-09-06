@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Tesseris.ModApi</RootNamespace>
+    <AssemblyName>Tesseris.ModApi</AssemblyName>
+    <Version>2.0.0</Version>
+    <PackageVersion>2.0.0</PackageVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <PackageId>Tesseris.ModApi</PackageId>
+    <Title>Tesseris Mod API</Title>
+    <Description>Stable public contracts for managed Tesseris mods.</Description>
+    <Authors>Tesseris</Authors>
+    <PackageTags>tesseris;modding;api</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <IsPackable>true</IsPackable>
+    <IncludeSymbols>false</IncludeSymbols>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+</Project>

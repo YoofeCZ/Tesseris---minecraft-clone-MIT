@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:chiseled_sandstone_stairs",
+  "texture": "chiseled_sandstone",
+  "material": "Stone",
+  "requiredTier": "Flint",
+  "hardness": 0.9,
+  "pieces": 63,
+  "opaque": true,
+  "chiselable": false
+}

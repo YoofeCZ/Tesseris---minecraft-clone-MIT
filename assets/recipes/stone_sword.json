@@ -1,0 +1,10 @@
+{
+  "id": "stone_sword",
+  "output": "tesseris:stone_sword",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:cobblestone", "count": 2 },
+    { "item": "tesseris:stick", "count": 1 }
+  ]
+}

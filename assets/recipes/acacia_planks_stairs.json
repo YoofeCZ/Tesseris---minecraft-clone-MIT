@@ -1,0 +1,9 @@
+{
+  "id": "acacia_planks_stairs",
+  "output": "tesseris:acacia_planks_stairs",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:acacia_planks", "count": 3 }
+  ]
+}

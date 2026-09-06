@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:redstone_ore",
+  "name": "redstone ruda",
+  "texture": "redstone_ore",
+  "kind": "Block",
+  "block": "tesseris:redstone_ore",
+  "maxStack": 64
+}

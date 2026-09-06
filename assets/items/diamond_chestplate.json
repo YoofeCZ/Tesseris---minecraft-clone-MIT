@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:diamond_chestplate",
+  "name": "diamantový kyrys",
+  "texture": "diamond_chestplate",
+  "kind": "Armour",
+  "slot": "Chestplate",
+  "tier": "Diamond",
+  "durability": 304,
+  "protection": 0.76,
+  "maxStack": 1
+}

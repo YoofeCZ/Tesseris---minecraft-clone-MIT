@@ -1,0 +1,12 @@
+{
+  "id": "bricks_slab",
+  "output": "tesseris:bricks_slab",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:bricks",
+      "count": 1
+    }
+  ]
+}

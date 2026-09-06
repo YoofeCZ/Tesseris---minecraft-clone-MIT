@@ -1,0 +1,14 @@
+{
+  "id": "tesseris:dead_bush",
+  "texture": "dead_bush",
+  "material": "Wood",
+  "hardness": 0.05,
+  "chiselable": false,
+  "opaque": false,
+  "solid": false,
+  "shape": "Cross",
+  "groundBlocks": [
+    "tesseris:sand",
+    "tesseris:red_sand"
+  ]
+}

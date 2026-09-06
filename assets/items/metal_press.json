@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:metal_press",
+  "name": "lis na kovové pláty",
+  "iconTexture": "hypro_metal_press_icon",
+  "kind": "Block",
+  "block": "tesseris:metal_press"
+}

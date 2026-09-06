@@ -1,0 +1,12 @@
+{
+  "id": "polished_limestone_slab",
+  "output": "tesseris:polished_limestone_slab",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:polished_limestone",
+      "count": 1
+    }
+  ]
+}

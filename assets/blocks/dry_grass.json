@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:dry_grass",
+  "texture": "dirt",
+  "faces": {
+    "top": "dry_grass_top",
+    "side": "dry_grass_side"
+  },
+  "material": "Soil",
+  "hardness": 0.6,
+  "chiselable": true,
+  "opaque": true
+}

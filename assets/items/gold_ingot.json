@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:gold_ingot",
+  "name": "zlatý ingot",
+  "texture": "gold_ingot",
+  "kind": "Material",
+  "maxStack": 64
+}

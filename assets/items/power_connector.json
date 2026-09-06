@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:power_connector",
+  "name": "elektrická přípojka",
+  "texture": "power_connector",
+  "kind": "Block",
+  "block": "tesseris:power_connector",
+  "maxStack": 64
+}

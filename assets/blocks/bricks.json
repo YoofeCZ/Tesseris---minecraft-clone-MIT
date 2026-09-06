@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:bricks",
+  "texture": "bricks",
+  "material": "Stone",
+  "requiredTier": "Flint",
+  "hardness": 1.5,
+  "chiselable": true,
+  "opaque": true
+}

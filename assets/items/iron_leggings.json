@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:iron_leggings",
+  "name": "železné nohavice",
+  "texture": "iron_leggings",
+  "kind": "Armour",
+  "slot": "Leggings",
+  "tier": "Iron",
+  "durability": 160,
+  "protection": 0.3,
+  "maxStack": 1
+}

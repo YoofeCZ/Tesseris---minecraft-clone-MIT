@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:polished_granite",
+  "texture": "polished_granite",
+  "material": "Stone",
+  "hardness": 2.2,
+  "requiredTier": "Flint",
+  "chiselable": true,
+  "opaque": true
+}

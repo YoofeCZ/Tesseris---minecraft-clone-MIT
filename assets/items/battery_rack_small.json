@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:battery_rack_small",
+  "name": "malá baterie",
+  "iconTexture": "hypro_battery_rack_small_icon",
+  "kind": "Block",
+  "block": "tesseris:battery_rack_small"
+}

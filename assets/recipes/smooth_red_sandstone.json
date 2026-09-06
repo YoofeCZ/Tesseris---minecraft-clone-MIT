@@ -1,0 +1,12 @@
+{
+  "id": "smooth_red_sandstone",
+  "output": "tesseris:smooth_red_sandstone",
+  "count": 1,
+  "smelting": true,
+  "inputs": [
+    {
+      "item": "tesseris:red_sand",
+      "count": 1
+    }
+  ]
+}

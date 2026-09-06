@@ -1,0 +1,4 @@
+# Nainstalované balíčky modů jsou lokální build výstupy.
+*
+!.gitignore
+!README.md

@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:solar_panel",
+  "texture": "hypro_solar_panel",
+  "shape": "HytaleModel",
+  "model": "hytale/solar_panel",
+  "modelTextureWidth": 128,
+  "modelTextureHeight": 128,
+  "material": "Stone",
+  "hardness": 2.5,
+  "chiselable": false,
+  "opaque": true
+}

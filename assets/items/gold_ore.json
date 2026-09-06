@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:gold_ore",
+  "name": "zlatá ruda",
+  "texture": "gold_ore",
+  "kind": "Block",
+  "block": "tesseris:gold_ore",
+  "maxStack": 64
+}

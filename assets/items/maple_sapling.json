@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:maple_sapling",
+  "name": "javorovĂˇ sazenice",
+  "texture": "maple_sapling",
+  "kind": "Block",
+  "block": "tesseris:maple_sapling",
+  "maxStack": 64,
+  "burnSeconds": 5
+}

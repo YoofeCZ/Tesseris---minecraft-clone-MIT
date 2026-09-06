@@ -1,0 +1,7 @@
+{
+  "name": "Ruby",
+  "texture": "ruby:ruby",
+  "iconTexture": "ruby:ruby",
+  "kind": "Material",
+  "maxStack": 64
+}

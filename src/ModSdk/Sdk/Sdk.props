@@ -1,0 +1,29 @@
+<Project>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <TargetFramework Condition="'$(TargetFramework)' == ''">net8.0</TargetFramework>
+    <OutputType Condition="'$(OutputType)' == ''">Library</OutputType>
+    <Nullable Condition="'$(Nullable)' == ''">enable</Nullable>
+    <ImplicitUsings Condition="'$(ImplicitUsings)' == ''">enable</ImplicitUsings>
+    <TreatWarningsAsErrors Condition="'$(TreatWarningsAsErrors)' == ''">true</TreatWarningsAsErrors>
+    <Deterministic>true</Deterministic>
+    <ModVersion Condition="'$(ModVersion)' == ''">1.0.0</ModVersion>
+    <ModApiVersion Condition="'$(ModApiVersion)' == ''">^2.0.0</ModApiVersion>
+    <TesserisModApiPackageVersion Condition="'$(TesserisModApiPackageVersion)' == ''">2.0.0</TesserisModApiPackageVersion>
+    <TesserisLoaderAbstractionsPackageVersion Condition="'$(TesserisLoaderAbstractionsPackageVersion)' == ''">2.0.0</TesserisLoaderAbstractionsPackageVersion>
+    <TesserisModManifest Condition="'$(TesserisModManifest)' == ''">$(MSBuildProjectDirectory)\tesseris.mod.json</TesserisModManifest>
+    <TesserisContentRoot Condition="'$(TesserisContentRoot)' == ''">content</TesserisContentRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Tesseris.ModApi"
+                      Version="$(TesserisModApiPackageVersion)"
+                      ExcludeAssets="runtime"
+                      PrivateAssets="all" />
+    <PackageReference Include="Tesseris.Loader.Abstractions"
+                      Version="$(TesserisLoaderAbstractionsPackageVersion)"
+                      ExcludeAssets="runtime"
+                      PrivateAssets="all" />
+  </ItemGroup>
+</Project>

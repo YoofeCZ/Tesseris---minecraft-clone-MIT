@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:iron_ore",
+  "texture": "iron_ore",
+  "material": "Stone",
+  "requiredTier": "Stone",
+  "hardness": 4.5,
+  "dropItem": "tesseris:raw_iron",
+  "chiselable": true,
+  "opaque": true
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:diamond_shovel",
+  "name": "diamantovy lopata",
+  "texture": "re_diamond_shovel_texture",
+  "iconTexture": "diamond_shovel",
+  "kind": "Tool",
+  "tool": "Shovel",
+  "tier": "Diamond",
+  "durability": 1562,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "diamond_shovel"
+}

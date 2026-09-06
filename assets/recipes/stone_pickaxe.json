@@ -1,0 +1,10 @@
+{
+  "id": "stone_pickaxe",
+  "output": "tesseris:stone_pickaxe",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:cobblestone", "count": 3 },
+    { "item": "tesseris:stick", "count": 2 }
+  ]
+}

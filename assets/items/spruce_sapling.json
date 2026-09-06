@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:spruce_sapling",
+  "name": "smrkovĂˇ sazenice",
+  "texture": "spruce_sapling",
+  "kind": "Block",
+  "block": "tesseris:spruce_sapling",
+  "maxStack": 64,
+  "burnSeconds": 5
+}

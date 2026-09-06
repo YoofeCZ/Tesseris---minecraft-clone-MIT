@@ -1,0 +1,46 @@
+# Build výstupy
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+
+# Uživatelská nastavení IDE
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+
+# Testy a profiling
+[Tt]est[Rr]esult*/
+*.coverage
+*.nvuser
+BenchmarkDotNet.Artifacts/
+
+# Uložené světy (generují se za běhu)
+saves/
+!tests/Fixtures/Saves/
+!tests/Fixtures/Saves/**
+
+# Nativní knihovny se do repa nedávají jako binárky – viz docs/PROGRESS.md
+native/*.dll
+native/*.so
+native/*.dylib
+
+# Zálohy před riskantními zásahy. Jsou to kopie zdrojů, které patří na disk,
+# ne do historie — jinak každá záloha zdvojnásobí velikost repozitáře.
+.zalohy/
+
+# Stažené upstream zdrojáky používané jen jako implementační reference.
+references/luanti/
+references/animalia/
+references/mobs_animal/
+references/mobs_monster/
+references/mobs_redo/
+
+# Nativni build (IrrlichtMt + most). Artefakty, ne zdrojaky.
+build/
+
+# Pracovní scratchpad sezení — mezivýsledky, ne výstup práce.
+.scratch/

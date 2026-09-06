@@ -1,0 +1,12 @@
+{
+  "id": "cut_red_sandstone_slab",
+  "output": "tesseris:cut_red_sandstone_slab",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:cut_red_sandstone",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:ladder",
+  "texture": "ladder",
+  "material": "Wood",
+  "hardness": 0.4,
+  "shape": "Ladder",
+  "pieces": 192,
+  "opaque": false,
+  "cutout": true,
+  "solid": true,
+  "chiselable": false,
+  "burnSeconds": 8
+}

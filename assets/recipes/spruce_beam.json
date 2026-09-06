@@ -1,0 +1,9 @@
+{
+  "id": "spruce_beam",
+  "output": "tesseris:spruce_beam",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:spruce_log", "count": 2 }
+  ]
+}

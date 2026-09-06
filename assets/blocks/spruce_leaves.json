@@ -1,0 +1,16 @@
+{
+  "id": "tesseris:spruce_leaves",
+  "texture": "spruce_leaves",
+  "material": "Wood",
+  "hardness": 0.2,
+  "chiselable": false,
+  "opaque": false,
+  "cutout": true,
+  "overhang": 0.45,
+  "shape": "Foliage",
+  "faces": {
+    "top": "spruce_leaves",
+    "side": "spruce_leaves_02",
+    "bottom": "spruce_leaves_03"
+  }
+}

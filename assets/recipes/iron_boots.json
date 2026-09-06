@@ -1,0 +1,11 @@
+{
+  "id": "iron_boots",
+  "output": "tesseris:iron_boots",
+  "count": 1,
+  "inputs": [
+    {
+      "item": "tesseris:iron_ingot",
+      "count": 2
+    }
+  ]
+}

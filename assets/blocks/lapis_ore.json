@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:lapis_ore",
+  "texture": "lapis_ore",
+  "material": "Stone",
+  "requiredTier": "Stone",
+  "hardness": 3.0,
+  "dropItem": "tesseris:lapis_lazuli",
+  "dropCount": 4,
+  "chiselable": true,
+  "opaque": true
+}

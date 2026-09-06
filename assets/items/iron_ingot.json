@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:iron_ingot",
+  "name": "železný ingot",
+  "texture": "iron_ingot",
+  "kind": "Material",
+  "tool": "None",
+  "tier": "None",
+  "durability": 0,
+  "maxStack": 64,
+  "burnSeconds": 0
+}

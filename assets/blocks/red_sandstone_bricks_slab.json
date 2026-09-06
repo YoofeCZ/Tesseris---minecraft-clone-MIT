@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:red_sandstone_bricks_slab",
+  "texture": "red_sandstone_bricks",
+  "material": "Stone",
+  "requiredTier": "Flint",
+  "hardness": 1.1,
+  "pieces": 15,
+  "opaque": true,
+  "chiselable": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "deepslate_tiles_stairs",
+  "output": "tesseris:deepslate_tiles_stairs",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:deepslate_tiles",
+      "count": 3
+    }
+  ]
+}

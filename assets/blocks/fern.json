@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:fern",
+  "texture": "fern",
+  "material": "Soil",
+  "hardness": 0.05,
+  "chiselable": false,
+  "opaque": false,
+  "solid": false,
+  "shape": "Cross",
+  "groundBlocks": [
+    "tesseris:grass"
+  ]
+}

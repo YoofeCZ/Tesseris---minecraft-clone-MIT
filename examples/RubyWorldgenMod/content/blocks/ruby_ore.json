@@ -1,0 +1,7 @@
+{
+  "texture": "ruby:ruby_ore",
+  "material": "Stone",
+  "hardness": 2.5,
+  "chiselable": true,
+  "opaque": true
+}

@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:wind_turbine",
+  "texture": "hypro_wind_turbine",
+  "shape": "HytaleModel",
+  "model": "hytale/wind_turbine",
+  "modelTextureWidth": 256,
+  "modelTextureHeight": 256,
+  "material": "Stone",
+  "hardness": 3.5,
+  "chiselable": false,
+  "opaque": true
+}

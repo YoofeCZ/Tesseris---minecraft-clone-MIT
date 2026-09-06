@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:oak_sapling",
+  "name": "dubovĂˇ sazenice",
+  "texture": "oak_sapling",
+  "kind": "Block",
+  "block": "tesseris:oak_sapling",
+  "maxStack": 64,
+  "burnSeconds": 5
+}

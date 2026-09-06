@@ -1,0 +1,9 @@
+{
+  "id": "bucket",
+  "output": "tesseris:bucket",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:iron_ingot", "count": 3 }
+  ]
+}

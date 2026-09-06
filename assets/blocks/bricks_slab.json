@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:bricks_slab",
+  "texture": "bricks",
+  "material": "Stone",
+  "requiredTier": "Flint",
+  "hardness": 1.5,
+  "pieces": 15,
+  "opaque": true,
+  "chiselable": false
+}

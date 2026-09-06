@@ -1,0 +1,14 @@
+{
+  "id": "tesseris:maple_beam",
+  "texture": "maple_log_side",
+  "faces": {
+    "top": "maple_log_top",
+    "bottom": "maple_log_top"
+  },
+  "material": "Wood",
+  "hardness": 1.2,
+  "chiselable": true,
+  "opaque": true,
+  "burnSeconds": 30,
+  "burnResidue": "tesseris:charcoal"
+}

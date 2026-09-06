@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:emerald_ore",
+  "texture": "emerald_ore",
+  "material": "Stone",
+  "requiredTier": "Iron",
+  "hardness": 5.0,
+  "dropItem": "tesseris:emerald",
+  "chiselable": true,
+  "opaque": true
+}

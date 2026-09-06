@@ -1,0 +1,10 @@
+{
+  "id": "stone_shovel",
+  "output": "tesseris:stone_shovel",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:cobblestone", "count": 1 },
+    { "item": "tesseris:stick", "count": 2 }
+  ]
+}

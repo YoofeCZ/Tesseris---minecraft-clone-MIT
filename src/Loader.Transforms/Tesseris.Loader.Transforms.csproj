@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Tesseris.Loader.Transforms</RootNamespace>
+    <AssemblyName>Tesseris.Loader.Transforms</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mono.Cecil" Version="0.11.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Loader.Abstractions\Tesseris.Loader.Abstractions.csproj" />
+    <ProjectReference Include="..\ModApi\Tesseris.ModApi.csproj" />
+  </ItemGroup>
+
+</Project>

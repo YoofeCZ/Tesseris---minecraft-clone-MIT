@@ -1,0 +1,15 @@
+{
+  "id": "tesseris:flint_mid",
+  "texture": "flint_chip",
+  "model": "flint_chip_mid",
+  "dropItem": "tesseris:flint",
+  "dropCount": 2,
+  "material": "None",
+  "hardness": 0.05,
+  "chiselable": false,
+  "opaque": false,
+  "cutout": true,
+  "solid": false,
+  "shape": "GroundClutter",
+  "groundBlocks": ["tesseris:grass", "tesseris:dry_grass", "tesseris:sand", "tesseris:gravel", "tesseris:stone"]
+}

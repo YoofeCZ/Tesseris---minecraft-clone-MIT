@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:alloy_smelter",
+  "texture": "hypro_alloy_smelter",
+  "shape": "HytaleModel",
+  "model": "hytale/alloy_smelter",
+  "modelTextureWidth": 256,
+  "modelTextureHeight": 256,
+  "material": "Stone",
+  "hardness": 3.5,
+  "chiselable": false,
+  "opaque": true
+}

@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:stone_furnace",
+  "name": "kamenná pec",
+  "iconTexture": "stone_furnace_icon",
+  "kind": "Block",
+  "block": "tesseris:stone_furnace"
+}

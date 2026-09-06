@@ -1,0 +1,12 @@
+{
+  "id": "polished_limestone",
+  "output": "tesseris:polished_limestone",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:limestone",
+      "count": 1
+    }
+  ]
+}

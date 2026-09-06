@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:stone_pickaxe",
+  "name": "kamenny krumpáč",
+  "texture": "re_stone_pickaxe_texture",
+  "iconTexture": "stone_pickaxe",
+  "kind": "Tool",
+  "tool": "Pickaxe",
+  "tier": "Stone",
+  "durability": 132,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "stone_pickaxe"
+}

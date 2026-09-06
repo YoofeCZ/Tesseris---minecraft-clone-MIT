@@ -1,0 +1,12 @@
+{
+  "id": "polished_marble_slab",
+  "output": "tesseris:polished_marble_slab",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:polished_marble",
+      "count": 1
+    }
+  ]
+}

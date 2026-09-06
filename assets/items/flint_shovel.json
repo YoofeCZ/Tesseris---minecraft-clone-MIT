@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:flint_shovel",
+  "name": "pazourkova lopata",
+  "texture": "re_flint_shovel_texture",
+  "iconTexture": "flint_shovel",
+  "kind": "Tool",
+  "tool": "Shovel",
+  "tier": "Flint",
+  "durability": 60,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "flint_shovel"
+}

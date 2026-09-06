@@ -1,0 +1,12 @@
+{
+  "id": "basalt_stairs",
+  "output": "tesseris:basalt_stairs",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:basalt",
+      "count": 3
+    }
+  ]
+}

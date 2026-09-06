@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:power_transformer",
+  "texture": "power_transformer",
+  "material": "Stone",
+  "hardness": 3.5,
+  "chiselable": false,
+  "opaque": true
+}

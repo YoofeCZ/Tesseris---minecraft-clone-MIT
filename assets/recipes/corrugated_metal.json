@@ -1,0 +1,12 @@
+{
+  "id": "corrugated_metal",
+  "output": "tesseris:corrugated_metal",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:iron_ingot",
+      "count": 3
+    }
+  ]
+}

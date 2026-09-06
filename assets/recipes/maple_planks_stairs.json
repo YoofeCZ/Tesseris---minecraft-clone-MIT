@@ -1,0 +1,9 @@
+{
+  "id": "maple_planks_stairs",
+  "output": "tesseris:maple_planks_stairs",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:maple_planks", "count": 3 }
+  ]
+}

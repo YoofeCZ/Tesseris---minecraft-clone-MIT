@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:diamond_pickaxe",
+  "name": "diamantovy krumpáč",
+  "texture": "re_diamond_pickaxe_texture",
+  "iconTexture": "diamond_pickaxe",
+  "kind": "Tool",
+  "tool": "Pickaxe",
+  "tier": "Diamond",
+  "durability": 1562,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "diamond_pickaxe"
+}

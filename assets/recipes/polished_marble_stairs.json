@@ -1,0 +1,12 @@
+{
+  "id": "polished_marble_stairs",
+  "output": "tesseris:polished_marble_stairs",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:polished_marble",
+      "count": 3
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:water",
+  "texture": "water",
+  "material": "Glass",
+  "hardness": 100.0,
+  "chiselable": false,
+  "opaque": false,
+  "solid": false,
+  "liquid": true
+}

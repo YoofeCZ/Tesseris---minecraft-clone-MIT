@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:polished_limestone",
+  "texture": "polished_limestone",
+  "material": "Stone",
+  "hardness": 1.8,
+  "requiredTier": "Flint",
+  "chiselable": true,
+  "opaque": true
+}

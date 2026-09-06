@@ -1,0 +1,15 @@
+{
+  "id": "tesseris:small_stone_mid",
+  "texture": "stone_chip",
+  "model": "stone_chip_mid",
+  "dropItem": "tesseris:small_stone",
+  "dropCount": 2,
+  "material": "None",
+  "hardness": 0.05,
+  "chiselable": false,
+  "opaque": false,
+  "cutout": true,
+  "solid": false,
+  "shape": "GroundClutter",
+  "groundBlocks": ["tesseris:grass", "tesseris:dry_grass", "tesseris:dirt", "tesseris:sand", "tesseris:gravel", "tesseris:stone", "tesseris:snow"]
+}

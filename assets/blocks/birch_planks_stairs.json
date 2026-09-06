@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:birch_planks_stairs",
+  "texture": "birch_planks",
+  "material": "Wood",
+  "hardness": 0.8,
+  "pieces": 63,
+  "chiselable": false,
+  "opaque": true,
+  "burnSeconds": 12,
+  "burnResidue": "tesseris:charcoal"
+}

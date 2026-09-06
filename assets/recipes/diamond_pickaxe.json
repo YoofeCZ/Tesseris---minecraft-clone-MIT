@@ -1,0 +1,10 @@
+{
+  "id": "diamond_pickaxe",
+  "output": "tesseris:diamond_pickaxe",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:diamond", "count": 3 },
+    { "item": "tesseris:stick", "count": 2 }
+  ]
+}

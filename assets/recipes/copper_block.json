@@ -1,0 +1,12 @@
+{
+  "id": "copper_block",
+  "output": "tesseris:copper_block",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:copper_ingot",
+      "count": 9
+    }
+  ]
+}

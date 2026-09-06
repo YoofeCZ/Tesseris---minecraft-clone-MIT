@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:slate_shingles_slab",
+  "texture": "slate_shingles",
+  "material": "Stone",
+  "requiredTier": "Flint",
+  "hardness": 1.7,
+  "pieces": 15,
+  "opaque": true,
+  "chiselable": false
+}

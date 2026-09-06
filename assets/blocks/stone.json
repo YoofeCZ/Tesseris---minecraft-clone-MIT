@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:stone",
+  "texture": "stone",
+  "material": "Stone",
+  "hardness": 1.5,
+  "chiselable": true,
+  "opaque": true
+}

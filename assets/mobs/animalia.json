@@ -1,0 +1,760 @@
+{
+ "schemaVersion": 1,
+ "usage": "shippable",
+ "commercialDistributionAllowed": true,
+ "notice": "Animalia by ElCeejo, MIT. Keep the copyright notice and licence text with any distribution.",
+ "sources": {
+  "animalia": {
+   "url": "https://github.com/ElCeejo/animalia",
+   "license": "MIT"
+  }
+ },
+ "excluded": [
+  {
+   "name": "animalia:frog",
+   "reason": "Animace se vybiraji az za behu podle varianty modelu; staticky se nedaji vycist."
+  },
+  {
+   "name": "animalia:tropical_fish",
+   "reason": "Ma jen klipy swim/flop — potrebuje plavajici pohyb."
+  },
+  {
+   "name": "animalia:chicken, cow, sheep, rat",
+   "reason": "Tyz druh uz mame z mobs_animal."
+  }
+ ],
+ "mobs": [
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:bat"
+   ],
+   "name": "Bat",
+   "sourceLua": "bat.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_bat.b3d",
+    "sourceModel": "models/animalia_bat.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_bat_1.png",
+     "assets/textures/animalia_bat_2.png",
+     "assets/textures/animalia_bat_3.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1.0,
+      40.0,
+      10.0
+     ],
+     "walk": [
+      51.0,
+      69.0,
+      30.0
+     ],
+     "run": [
+      51.0,
+      69.0,
+      30.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "flying",
+    "walkSpeed": 4.0,
+    "runSpeed": 4.0,
+    "range": 12.0,
+    "health": 2.0,
+    "damage": 0.0,
+    "width": 0.15,
+    "height": 0.3,
+    "hostile": false
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  },
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:grizzly_bear"
+   ],
+   "name": "Grizzly Bear",
+   "sourceLua": "bear.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_bear.b3d",
+    "sourceModel": "models/animalia_bear.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_bear_grizzly.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1.0,
+      59.0,
+      10.0
+     ],
+     "walk": [
+      61.0,
+      79.0,
+      10.0
+     ],
+     "run": [
+      81.0,
+      99.0,
+      20.0
+     ],
+     "punch": [
+      101.0,
+      120.0,
+      30.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "defensive",
+    "walkSpeed": 4.0,
+    "runSpeed": 4.0,
+    "range": 10.0,
+    "health": 20.0,
+    "damage": 6.0,
+    "width": 0.5,
+    "height": 1.0,
+    "hostile": true
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  },
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:cat"
+   ],
+   "name": "Cat",
+   "sourceLua": "cat.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_cat.b3d",
+    "sourceModel": "models/animalia_cat.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_cat_1.png",
+     "assets/textures/animalia_cat_2.png",
+     "assets/textures/animalia_cat_3.png",
+     "assets/textures/animalia_cat_4.png",
+     "assets/textures/animalia_cat_5.png",
+     "assets/textures/animalia_cat_6.png",
+     "assets/textures/animalia_cat_7.png",
+     "assets/textures/animalia_cat_8.png",
+     "assets/textures/animalia_cat_9.png",
+     "assets/textures/animalia_cat_ash.png",
+     "assets/textures/animalia_cat_birch.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1.0,
+      60.0,
+      20.0
+     ],
+     "walk": [
+      70.0,
+      89.0,
+      30.0
+     ],
+     "run": [
+      100.0,
+      119.0,
+      40.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "predator",
+    "walkSpeed": 3.0,
+    "runSpeed": 3.0,
+    "range": 16.0,
+    "health": 10.0,
+    "damage": 1.0,
+    "width": 0.2,
+    "height": 0.4,
+    "hostile": false
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  },
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:fox"
+   ],
+   "name": "Fox",
+   "sourceLua": "fox.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_fox.b3d",
+    "sourceModel": "models/animalia_fox.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_fox_1.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1.0,
+      39.0,
+      10.0
+     ],
+     "walk": [
+      41.0,
+      59.0,
+      30.0
+     ],
+     "run": [
+      41.0,
+      59.0,
+      45.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "predator",
+    "walkSpeed": 4.0,
+    "runSpeed": 4.0,
+    "range": 16.0,
+    "health": 10.0,
+    "damage": 2.0,
+    "width": 0.35,
+    "height": 0.5,
+    "hostile": false
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  },
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:horse"
+   ],
+   "name": "Horse",
+   "sourceLua": "horse.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_horse.b3d",
+    "sourceModel": "models/animalia_horse.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_horse_1.png",
+     "assets/textures/animalia_horse_2.png",
+     "assets/textures/animalia_horse_3.png",
+     "assets/textures/animalia_horse_4.png",
+     "assets/textures/animalia_horse_5.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1.0,
+      59.0,
+      10.0
+     ],
+     "walk": [
+      70.0,
+      89.0,
+      20.0
+     ],
+     "run": [
+      101.0,
+      119.0,
+      40.0
+     ],
+     "replace": [
+      210.0,
+      240.0,
+      30.0
+     ],
+     "punch": [
+      170.0,
+      205.0,
+      30.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "skittish",
+    "walkSpeed": 10.0,
+    "runSpeed": 10.0,
+    "range": 16.0,
+    "health": 40.0,
+    "damage": 8.0,
+    "width": 0.65,
+    "height": 1.95,
+    "hostile": false
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  },
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:opossum"
+   ],
+   "name": "Opossum",
+   "sourceLua": "opossum.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_opossum.b3d",
+    "sourceModel": "models/animalia_opossum.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_opossum.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1.0,
+      59.0,
+      10.0
+     ],
+     "walk": [
+      70.0,
+      89.0,
+      30.0
+     ],
+     "run": [
+      100.0,
+      119.0,
+      45.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "skittish",
+    "walkSpeed": 4.0,
+    "runSpeed": 4.0,
+    "range": 16.0,
+    "health": 5.0,
+    "damage": 2.0,
+    "width": 0.25,
+    "height": 0.4,
+    "hostile": false
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  },
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:owl"
+   ],
+   "name": "Owl",
+   "sourceLua": "owl.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_owl.b3d",
+    "sourceModel": "models/animalia_owl.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_owl.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1.0,
+      60.0,
+      20.0
+     ],
+     "walk": [
+      71.0,
+      89.0,
+      30.0
+     ],
+     "run": [
+      71.0,
+      89.0,
+      30.0
+     ],
+     "replace": [
+      161.0,
+      179.0,
+      20.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "flying",
+    "walkSpeed": 4.0,
+    "runSpeed": 4.0,
+    "range": 16.0,
+    "health": 10.0,
+    "damage": 2.0,
+    "width": 0.15,
+    "height": 0.3,
+    "hostile": false
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  },
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:pig"
+   ],
+   "name": "Pig",
+   "sourceLua": "pig.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_pig.b3d",
+    "sourceModel": "models/animalia_pig.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_pig_1.png",
+     "assets/textures/animalia_pig_2.png",
+     "assets/textures/animalia_pig_3.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1.0,
+      60.0,
+      20.0
+     ],
+     "walk": [
+      70.0,
+      89.0,
+      30.0
+     ],
+     "run": [
+      100.0,
+      119.0,
+      40.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "skittish",
+    "walkSpeed": 3.0,
+    "runSpeed": 3.0,
+    "range": 12.0,
+    "health": 20.0,
+    "damage": 2.0,
+    "width": 0.35,
+    "height": 0.7,
+    "hostile": false
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  },
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:song_bird"
+   ],
+   "name": "Song Bird",
+   "sourceLua": "song_bird.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_bird.b3d",
+    "sourceModel": "models/animalia_bird.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_cardinal.png",
+     "assets/textures/animalia_bluebird.png",
+     "assets/textures/animalia_goldfinch.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1.0,
+      100.0,
+      30.0
+     ],
+     "walk": [
+      110.0,
+      130.0,
+      40.0
+     ],
+     "run": [
+      110.0,
+      130.0,
+      40.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "flying",
+    "walkSpeed": 4.0,
+    "runSpeed": 4.0,
+    "range": 8.0,
+    "health": 2.0,
+    "damage": null,
+    "width": 0.2,
+    "height": 0.4,
+    "hostile": false
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  },
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:turkey"
+   ],
+   "name": "Turkey",
+   "sourceLua": "turkey.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_turkey.b3d",
+    "sourceModel": "models/animalia_turkey.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_turkey_hen.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "walk": [
+      10.0,
+      30.0,
+      30.0
+     ],
+     "run": [
+      40.0,
+      60.0,
+      45.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "skittish",
+    "walkSpeed": 2.0,
+    "runSpeed": 2.0,
+    "range": 8.0,
+    "health": 8.0,
+    "damage": 0.0,
+    "width": 0.3,
+    "height": 0.6,
+    "hostile": false
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  },
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:reindeer"
+   ],
+   "name": "Reindeer",
+   "sourceLua": "reindeer.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_reindeer.b3d",
+    "sourceModel": "models/animalia_reindeer.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_reindeer.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1.0,
+      59.0,
+      10.0
+     ],
+     "walk": [
+      70.0,
+      89.0,
+      30.0
+     ],
+     "run": [
+      100.0,
+      119.0,
+      40.0
+     ],
+     "replace": [
+      130.0,
+      150.0,
+      20.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "skittish",
+    "walkSpeed": 3.0,
+    "runSpeed": 3.0,
+    "range": 12.0,
+    "health": 15.0,
+    "damage": 0.0,
+    "width": 0.45,
+    "height": 0.9,
+    "hostile": false
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  },
+  {
+   "package": "animalia",
+   "luaIds": [
+    "animalia:wolf"
+   ],
+   "name": "Wolf",
+   "sourceLua": "wolf.lua",
+   "visual": {
+    "type": "mesh",
+    "model": "assets/models/animalia_wolf.b3d",
+    "sourceModel": "models/animalia_wolf.b3d",
+    "scale": [
+     10.0,
+     10.0
+    ],
+    "textures": [
+     "assets/textures/animalia_wolf_1.png",
+     "assets/textures/animalia_wolf_2.png",
+     "assets/textures/animalia_wolf_3.png",
+     "assets/textures/animalia_wolf_4.png"
+    ]
+   },
+   "animation": {
+    "fps": 15,
+    "clips": {
+     "stand": [
+      1.0,
+      60.0,
+      20.0
+     ],
+     "walk": [
+      70.0,
+      89.0,
+      30.0
+     ],
+     "run": [
+      100.0,
+      119.0,
+      40.0
+     ]
+    }
+   },
+   "ai": {
+    "class": "hostile",
+    "walkSpeed": 4.0,
+    "runSpeed": 4.0,
+    "range": 24.0,
+    "health": 20.0,
+    "damage": 4.0,
+    "width": 0.35,
+    "height": 0.7,
+    "hostile": false
+   },
+   "audio": [],
+   "license": {
+    "model": "MIT",
+    "textures": "MIT",
+    "audio": "MIT"
+   }
+  }
+ ]
+}

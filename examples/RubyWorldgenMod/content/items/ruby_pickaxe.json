@@ -1,0 +1,10 @@
+{
+  "name": "Ruby Pickaxe",
+  "texture": "ruby:ruby_pickaxe",
+  "iconTexture": "ruby:ruby_pickaxe",
+  "kind": "Tool",
+  "tool": "Pickaxe",
+  "tier": "Diamond",
+  "durability": 1800,
+  "maxStack": 1
+}

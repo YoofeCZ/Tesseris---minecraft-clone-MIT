@@ -1,0 +1,91 @@
+<Project>
+
+  <!--
+    Preklad shaderu GLSL -> SPIR-V.
+
+    Vulkan na rozdil od OpenGL nebere zdrojak shaderu. Chce SPIR-V, tedy prelozeny
+    mezikod. Preklada se pri buildu, ne pri behu, a to zamerne:
+
+      * Zadani projektu zakazuje vytvaret binarni assety, takze .spv soubory nesmi
+        lezet v repozitari. Vznikaji v obj/ a vkladaji se do sestaveni.
+      * Prekladem pri buildu se chyba v shaderu projevi jako chyba buildu, ne jako
+        pad pri startu hry.
+
+    Vysledny SPIR-V se VKLADA do sestaveni (EmbeddedResource), nekopiruje vedle binarky.
+    Duvod: text shadery patri Enginu, chunk shadery Hre. Kopirovanim by shadery Enginu
+    skoncily jen ve vystupu Enginu a hra by je za behu nenasla. Vlozenim je kazdy shader
+    v tom sestaveni, ktere ho pouziva, a pripadny single-file publish funguje taky.
+
+    Potreba je glslangValidator (balik glslang). Kdyz chybi, build skonci s hlaskou,
+    co doinstalovat.
+  -->
+
+  <ItemGroup>
+    <VoxelityShader Include="$(MSBuildProjectDirectory)/Shaders/*.vert;$(MSBuildProjectDirectory)/Shaders/*.frag" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <VoxelityShaderIntermediate>$(IntermediateOutputPath)shaders/</VoxelityShaderIntermediate>
+
+    <!-- Drzeno v property, protoze dve pomlcky za sebou se nesmi objevit v XML komentari. -->
+    <VoxelityTargetEnvFlag>--target-env</VoxelityTargetEnvFlag>
+  </PropertyGroup>
+
+  <Target Name="VoxelityFindShaderCompiler" Condition="'@(VoxelityShader)' != ''">
+    <PropertyGroup>
+      <!-- Poradi od nejkonkretnejsiho: SDK, Homebrew, /usr/local, nakonec spoleh na PATH. -->
+      <VoxelityGlslang Condition="'$(VoxelityGlslang)' == '' AND '$(VULKAN_SDK)' != '' AND Exists('$(VULKAN_SDK)/bin/glslangValidator')">$(VULKAN_SDK)/bin/glslangValidator</VoxelityGlslang>
+      <VoxelityGlslang Condition="'$(VoxelityGlslang)' == '' AND Exists('/opt/homebrew/bin/glslangValidator')">/opt/homebrew/bin/glslangValidator</VoxelityGlslang>
+      <VoxelityGlslang Condition="'$(VoxelityGlslang)' == '' AND Exists('/usr/local/bin/glslangValidator')">/usr/local/bin/glslangValidator</VoxelityGlslang>
+      <VoxelityGlslang Condition="'$(VoxelityGlslang)' == ''">glslangValidator</VoxelityGlslang>
+    </PropertyGroup>
+
+    <Exec Command="&quot;$(VoxelityGlslang)&quot; --version"
+          ContinueOnError="true"
+          StandardOutputImportance="low"
+          StandardErrorImportance="low">
+      <Output TaskParameter="ExitCode" PropertyName="VoxelityGlslangProbe" />
+    </Exec>
+
+    <Error Condition="'$(VoxelityGlslangProbe)' != '0'"
+           Text="Prekladac shaderu glslangValidator se nenasel (zkouseno: $(VoxelityGlslang)). Voxelity bezi na Vulkanu a ten potrebuje SPIR-V. Nainstaluj:&#xA;    macOS:  brew install glslang&#xA;    Linux:  apt install glslang-tools&#xA;    Windows: soucast Vulkan SDK (nastav VULKAN_SDK)" />
+  </Target>
+
+  <Target Name="VoxelityCompileShaders"
+          Condition="'@(VoxelityShader)' != ''"
+          DependsOnTargets="VoxelityFindShaderCompiler"
+          BeforeTargets="PrepareResources;BeforeBuild">
+
+    <MakeDir Directories="$(VoxelityShaderIntermediate)" />
+
+    <!--
+      Prepinac -V zapne generovani SPIR-V, cilove prostredi se nastavuje na vulkan1.3
+      kvuli dynamic rendering. Jmeno vystupu si nechava priponu zdroje (chunk.vert.spv),
+      aby bylo z nazvu poznat, o ktery stupen jde.
+    -->
+    <Exec Command="&quot;$(VoxelityGlslang)&quot; -V $(VoxelityTargetEnvFlag) vulkan1.3 -o &quot;$(VoxelityShaderIntermediate)%(VoxelityShader.Filename)%(VoxelityShader.Extension).spv&quot; &quot;%(VoxelityShader.FullPath)&quot;"
+          StandardOutputImportance="low" />
+
+    <!--
+      Vlozeni je ve stejnem cili a cil zamerne NEMA Inputs/Outputs.
+
+      Prvni pokus mel preklad a vlozeni oddelene a preklad mel inkrementalni kontrolu.
+      Dopadlo to spatne hned dvakrat: pri aktualnich .spv se cil preskocil i s vlozenim,
+      a zaveseni na BeforeCompile bylo pozde, protoze jmena prostredku se pocitaji uz
+      v PrepareResources. Vysledek se prelozil bez jedine chyby a sestaveni bylo bez
+      shaderu - takova chyba se najde az padem pri startu hry.
+
+      Ctyri drobne shadery se prelozi za par milisekund, takze poustet to pokazde je
+      levnejsi nez spravovat inkrementalitu, ktera muze tise vypustit prostredek.
+    -->
+    <ItemGroup>
+      <EmbeddedResource Include="$(VoxelityShaderIntermediate)*.spv">
+        <!-- Bez LogicalName by prostredek dostal jmeno odvozene z cesty v obj/. -->
+        <LogicalName>%(Filename)%(Extension)</LogicalName>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <Message Importance="normal" Text="Voxelity: vlozeno @(EmbeddedResource->Count()) shaderu jako SPIR-V." />
+  </Target>
+
+</Project>

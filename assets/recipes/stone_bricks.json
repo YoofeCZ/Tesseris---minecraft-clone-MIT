@@ -1,0 +1,12 @@
+{
+  "id": "stone_bricks",
+  "output": "tesseris:stone_bricks",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:stone",
+      "count": 4
+    }
+  ]
+}

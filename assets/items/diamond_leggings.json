@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:diamond_leggings",
+  "name": "diamantové nohavice",
+  "texture": "diamond_leggings",
+  "kind": "Armour",
+  "slot": "Leggings",
+  "tier": "Diamond",
+  "durability": 304,
+  "protection": 0.57,
+  "maxStack": 1
+}

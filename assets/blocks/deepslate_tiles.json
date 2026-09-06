@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:deepslate_tiles",
+  "texture": "deepslate_tiles",
+  "material": "Stone",
+  "hardness": 3.2,
+  "requiredTier": "Flint",
+  "chiselable": true,
+  "opaque": true
+}

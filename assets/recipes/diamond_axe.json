@@ -1,0 +1,10 @@
+{
+  "id": "diamond_axe",
+  "output": "tesseris:diamond_axe",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:diamond", "count": 3 },
+    { "item": "tesseris:stick", "count": 2 }
+  ]
+}

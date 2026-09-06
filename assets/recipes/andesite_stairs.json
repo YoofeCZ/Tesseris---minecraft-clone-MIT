@@ -1,0 +1,12 @@
+{
+  "id": "andesite_stairs",
+  "output": "tesseris:andesite_stairs",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:andesite",
+      "count": 3
+    }
+  ]
+}

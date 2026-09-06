@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:ore_crusher",
+  "name": "drtič rud",
+  "iconTexture": "hypro_ore_crusher_icon",
+  "kind": "Block",
+  "block": "tesseris:ore_crusher"
+}

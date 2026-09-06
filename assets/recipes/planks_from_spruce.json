@@ -1,0 +1,9 @@
+{
+  "id": "planks_from_spruce",
+  "output": "tesseris:planks",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:spruce_log", "count": 1 }
+  ]
+}

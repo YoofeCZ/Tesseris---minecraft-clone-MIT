@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:iron_pickaxe",
+  "name": "zelezny krumpáč",
+  "texture": "iron_pickaxe",
+  "iconTexture": "iron_pickaxe",
+  "kind": "Tool",
+  "tool": "Pickaxe",
+  "tier": "Iron",
+  "durability": 251,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "pickaxe"
+}

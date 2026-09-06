@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:corrugated_metal",
+  "texture": "corrugated_metal",
+  "material": "Stone",
+  "requiredTier": "Stone",
+  "hardness": 2.5,
+  "chiselable": true,
+  "opaque": true
+}

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Tesseris.Loader</RootNamespace>
+    <AssemblyName>Tesseris.Loader</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Loader.Abstractions\Tesseris.Loader.Abstractions.csproj" />
+    <ProjectReference Include="..\ModApi\Tesseris.ModApi.csproj" />
+  </ItemGroup>
+
+</Project>

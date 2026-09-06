@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Tesseris.Loader.Abstractions</RootNamespace>
+    <AssemblyName>Tesseris.Loader.Abstractions</AssemblyName>
+    <PackageId>Tesseris.Loader.Abstractions</PackageId>
+    <Version>2.0.0</Version>
+    <PackageVersion>2.0.0</PackageVersion>
+    <Description>Stable prelaunch and coremod contracts for the standalone Tesseris loader.</Description>
+    <Authors>Tesseris</Authors>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ModApi\Tesseris.ModApi.csproj" />
+  </ItemGroup>
+
+</Project>

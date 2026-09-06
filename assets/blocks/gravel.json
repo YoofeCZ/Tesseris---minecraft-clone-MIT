@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:gravel",
+  "texture": "gravel",
+  "material": "Sand",
+  "hardness": 0.5,
+  "chiselable": true,
+  "opaque": true
+}

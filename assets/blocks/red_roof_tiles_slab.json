@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:red_roof_tiles_slab",
+  "texture": "red_roof_tiles",
+  "material": "Stone",
+  "requiredTier": "Flint",
+  "hardness": 1.2,
+  "pieces": 15,
+  "opaque": true,
+  "chiselable": false
+}

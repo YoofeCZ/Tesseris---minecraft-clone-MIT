@@ -1,0 +1,12 @@
+{
+  "id": "diorite_stairs",
+  "output": "tesseris:diorite_stairs",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:diorite",
+      "count": 3
+    }
+  ]
+}

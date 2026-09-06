@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:cobblestone",
+  "name": "lĂˇmanĂ˝ kĂˇmen",
+  "kind": "Block",
+  "block": "tesseris:cobblestone",
+  "maxStack": 64
+}

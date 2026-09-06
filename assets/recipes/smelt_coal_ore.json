@@ -1,0 +1,9 @@
+{
+  "id": "smelt_coal_ore",
+  "output": "tesseris:coal",
+  "count": 1,
+  "smelting": true,
+  "inputs": [
+    { "item": "tesseris:coal_ore", "count": 1 }
+  ]
+}

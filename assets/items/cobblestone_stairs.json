@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:cobblestone_stairs",
+  "name": "schody z lĂˇmanĂ©ho kamene",
+  "kind": "Block",
+  "block": "tesseris:cobblestone_stairs",
+  "maxStack": 64
+}

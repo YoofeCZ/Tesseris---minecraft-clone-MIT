@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:maple_planks",
+  "texture": "maple_planks",
+  "material": "Wood",
+  "hardness": 0.8,
+  "chiselable": true,
+  "opaque": true,
+  "burnSeconds": 15,
+  "burnResidue": "tesseris:charcoal"
+}

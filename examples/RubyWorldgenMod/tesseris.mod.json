@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "id": "ruby",
+  "name": "Ruby Worldgen Example",
+  "version": "1.0.0",
+  "loaderVersion": "^2.0.0",
+  "modApiVersion": "^2.0.0",
+  "gameVersion": "*",
+  "entrypoints": [
+    {
+      "phase": "Runtime",
+      "assembly": "RubyWorldgen.dll",
+      "type": "RubyWorldgen.RubyMod"
+    }
+  ],
+  "contentRoot": "content",
+  "trustedCode": true,
+  "capabilities": ["worldgen", "content"]
+}

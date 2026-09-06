@@ -1,0 +1,9 @@
+{
+  "id": "planks_from_acacia",
+  "output": "tesseris:planks",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:acacia_log", "count": 1 }
+  ]
+}

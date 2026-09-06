@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:granite_stairs",
+  "texture": "granite",
+  "material": "Stone",
+  "hardness": 2.2,
+  "requiredTier": "Flint",
+  "pieces": 63,
+  "opaque": true,
+  "chiselable": false
+}

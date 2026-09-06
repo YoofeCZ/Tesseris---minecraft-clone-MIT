@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:oak_planks_slab",
+  "texture": "oak_planks",
+  "material": "Wood",
+  "hardness": 0.8,
+  "pieces": 15,
+  "chiselable": false,
+  "opaque": true,
+  "burnSeconds": 8,
+  "burnResidue": "tesseris:charcoal"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "tesseris:chest",
+  "texture": "chest_side",
+  "faces": {
+    "south": "chest_front",
+    "north": "chest_side",
+    "top": "chest_top",
+    "bottom": "chest_inside",
+    "side": "chest_side"
+  },
+  "material": "Wood",
+  "hardness": 1.5,
+  "chiselable": false,
+  "shape": "Chest",
+  "pieces": 64,
+  "opaque": false,
+  "cutout": true,
+  "burnSeconds": 15,
+  "burnResidue": "tesseris:charcoal"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:smoked_glass",
+  "texture": "smoked_glass",
+  "material": "Glass",
+  "requiredTier": "None",
+  "hardness": 0.4,
+  "chiselable": false,
+  "opaque": false,
+  "solid": true,
+  "cutout": false
+}

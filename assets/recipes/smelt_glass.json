@@ -1,0 +1,9 @@
+{
+  "id": "smelt_glass",
+  "output": "tesseris:glass",
+  "count": 1,
+  "smelting": true,
+  "inputs": [
+    { "item": "tesseris:sand", "count": 1 }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:wire_cutters",
+  "name": "štípačky na kabely",
+  "texture": "wire_cutters",
+  "kind": "Tool",
+  "tool": "None",
+  "tier": "Iron",
+  "durability": 512,
+  "maxStack": 1
+}

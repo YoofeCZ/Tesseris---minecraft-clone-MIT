@@ -1,0 +1,10 @@
+{
+  "id": "torch",
+  "output": "tesseris:torch",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:stick", "count": 1 },
+    { "item": "tesseris:coal", "count": 1 }
+  ]
+}

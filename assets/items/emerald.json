@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:emerald",
+  "name": "smaragd",
+  "texture": "emerald",
+  "kind": "Material",
+  "maxStack": 64
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:stone_axe",
+  "name": "kamenny sekera",
+  "texture": "re_stone_axe_texture",
+  "iconTexture": "stone_axe",
+  "kind": "Tool",
+  "tool": "Axe",
+  "tier": "Stone",
+  "durability": 132,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "stone_axe"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "oak_wood",
+  "output": "tesseris:oak_wood",
+  "count": 3,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:oak_log", "count": 4 }
+  ]
+}

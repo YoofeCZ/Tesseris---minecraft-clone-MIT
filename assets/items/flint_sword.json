@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:flint_sword",
+  "name": "pazourkovy mec",
+  "texture": "re_flint_sword_texture",
+  "iconTexture": "flint_sword",
+  "kind": "Tool",
+  "tool": "None",
+  "tier": "Flint",
+  "durability": 60,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "flint_sword"
+}

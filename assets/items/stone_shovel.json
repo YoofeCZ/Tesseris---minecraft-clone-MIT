@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:stone_shovel",
+  "name": "kamenny lopata",
+  "texture": "re_stone_shovel_texture",
+  "iconTexture": "stone_shovel",
+  "kind": "Tool",
+  "tool": "Shovel",
+  "tier": "Stone",
+  "durability": 132,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "stone_shovel"
+}

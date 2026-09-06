@@ -1,0 +1,9 @@
+{
+  "id": "maple_planks_slab",
+  "output": "tesseris:maple_planks_slab",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:maple_planks", "count": 1 }
+  ]
+}

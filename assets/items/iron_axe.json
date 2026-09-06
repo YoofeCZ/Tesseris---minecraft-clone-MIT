@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:iron_axe",
+  "name": "zelezny sekera",
+  "texture": "iron_axe",
+  "iconTexture": "iron_axe",
+  "kind": "Tool",
+  "tool": "Axe",
+  "tier": "Iron",
+  "durability": 251,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "axe"
+}

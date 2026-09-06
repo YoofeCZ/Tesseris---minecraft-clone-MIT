@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:ore_crusher",
+  "texture": "hypro_ore_crusher",
+  "shape": "HytaleModel",
+  "model": "hytale/ore_crusher",
+  "modelTextureWidth": 128,
+  "modelTextureHeight": 128,
+  "material": "Stone",
+  "hardness": 3.5,
+  "chiselable": false,
+  "opaque": true
+}

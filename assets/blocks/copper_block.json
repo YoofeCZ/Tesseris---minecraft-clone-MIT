@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:copper_block",
+  "texture": "copper_block",
+  "material": "Stone",
+  "requiredTier": "Stone",
+  "hardness": 3,
+  "chiselable": true,
+  "opaque": true
+}

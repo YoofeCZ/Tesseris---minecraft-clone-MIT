@@ -1,0 +1,12 @@
+{
+  "id": "bricks",
+  "output": "tesseris:bricks",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:terracotta",
+      "count": 4
+    }
+  ]
+}

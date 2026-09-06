@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:battery_rack_small",
+  "texture": "hypro_battery_rack_small",
+  "shape": "HytaleModel",
+  "model": "hytale/battery_rack_small",
+  "modelTextureWidth": 128,
+  "modelTextureHeight": 128,
+  "material": "Stone",
+  "hardness": 3.5,
+  "chiselable": false,
+  "opaque": true
+}

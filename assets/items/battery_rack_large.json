@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:battery_rack_large",
+  "name": "velká baterie",
+  "iconTexture": "hypro_battery_rack_large_icon",
+  "kind": "Block",
+  "block": "tesseris:battery_rack_large"
+}

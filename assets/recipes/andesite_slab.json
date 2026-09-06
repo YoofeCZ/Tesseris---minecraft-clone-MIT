@@ -1,0 +1,12 @@
+{
+  "id": "andesite_slab",
+  "output": "tesseris:andesite_slab",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:andesite",
+      "count": 1
+    }
+  ]
+}

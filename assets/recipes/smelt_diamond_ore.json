@@ -1,0 +1,9 @@
+{
+  "id": "smelt_diamond_ore",
+  "output": "tesseris:diamond",
+  "count": 1,
+  "smelting": true,
+  "inputs": [
+    { "item": "tesseris:diamond_ore", "count": 1 }
+  ]
+}

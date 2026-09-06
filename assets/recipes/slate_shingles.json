@@ -1,0 +1,12 @@
+{
+  "id": "slate_shingles",
+  "output": "tesseris:slate_shingles",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:deepslate",
+      "count": 3
+    }
+  ]
+}

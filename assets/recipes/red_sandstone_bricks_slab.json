@@ -1,0 +1,12 @@
+{
+  "id": "red_sandstone_bricks_slab",
+  "output": "tesseris:red_sandstone_bricks_slab",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:red_sandstone_bricks",
+      "count": 1
+    }
+  ]
+}

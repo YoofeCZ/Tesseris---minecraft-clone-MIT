@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:flint_axe",
+  "name": "pazourkova sekera",
+  "texture": "re_flint_axe_texture",
+  "iconTexture": "flint_axe",
+  "kind": "Tool",
+  "tool": "Axe",
+  "tier": "Flint",
+  "durability": 60,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "flint_axe"
+}

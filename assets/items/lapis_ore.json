@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:lapis_ore",
+  "name": "lazuritová ruda",
+  "texture": "lapis_ore",
+  "kind": "Block",
+  "block": "tesseris:lapis_ore",
+  "maxStack": 64
+}

@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:raw_gold",
+  "name": "surové zlato",
+  "texture": "raw_gold",
+  "kind": "Material",
+  "maxStack": 64
+}

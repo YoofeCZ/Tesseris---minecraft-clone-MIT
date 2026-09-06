@@ -1,0 +1,10 @@
+{
+  "id": "iron_shovel",
+  "output": "tesseris:iron_shovel",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:iron_ingot", "count": 1 },
+    { "item": "tesseris:stick", "count": 2 }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "tesseris:oak_beam",
+  "texture": "oak_log_side",
+  "faces": {
+    "top": "oak_log_top",
+    "bottom": "oak_log_top"
+  },
+  "material": "Wood",
+  "hardness": 1.2,
+  "chiselable": true,
+  "opaque": true,
+  "burnSeconds": 30,
+  "burnResidue": "tesseris:charcoal"
+}

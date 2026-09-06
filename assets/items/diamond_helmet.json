@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:diamond_helmet",
+  "name": "diamantová přilba",
+  "texture": "diamond_helmet",
+  "kind": "Armour",
+  "slot": "Helmet",
+  "tier": "Diamond",
+  "durability": 304,
+  "protection": 0.28,
+  "maxStack": 1
+}

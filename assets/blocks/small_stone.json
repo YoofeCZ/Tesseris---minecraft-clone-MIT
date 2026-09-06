@@ -1,0 +1,21 @@
+{
+  "id": "tesseris:small_stone",
+  "texture": "stone_chip",
+  "model": "stone_chip",
+  "material": "None",
+  "hardness": 0.05,
+  "chiselable": false,
+  "opaque": false,
+  "cutout": true,
+  "solid": false,
+  "shape": "GroundClutter",
+  "groundBlocks": [
+    "tesseris:grass",
+    "tesseris:dry_grass",
+    "tesseris:dirt",
+    "tesseris:sand",
+    "tesseris:gravel",
+    "tesseris:stone",
+    "tesseris:snow"
+  ]
+}

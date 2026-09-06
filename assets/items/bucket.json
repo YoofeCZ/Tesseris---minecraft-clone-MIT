@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:bucket",
+  "name": "kbelík",
+  "texture": "bucket",
+  "kind": "Bucket",
+  "tool": "None",
+  "tier": "None",
+  "durability": 0,
+  "maxStack": 1,
+  "burnSeconds": 0
+}

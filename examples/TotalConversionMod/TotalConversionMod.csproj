@@ -1,0 +1,11 @@
+<Project Sdk="Tesseris.ModSdk/2.0.1">
+  <PropertyGroup>
+    <AssemblyName>TotalConversionMod</AssemblyName>
+    <RootNamespace>TotalConversionMod</RootNamespace>
+    <ModId>total_conversion</ModId>
+    <ModName>Total Conversion Example</ModName>
+    <ModVersion>2.0.0</ModVersion>
+    <ModApiVersion>^2.0.0</ModApiVersion>
+    <ModEntryType>TotalConversionMod.TotalConversionEntry</ModEntryType>
+  </PropertyGroup>
+</Project>

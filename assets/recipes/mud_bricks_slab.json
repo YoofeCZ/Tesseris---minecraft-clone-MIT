@@ -1,0 +1,12 @@
+{
+  "id": "mud_bricks_slab",
+  "output": "tesseris:mud_bricks_slab",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:mud_bricks",
+      "count": 1
+    }
+  ]
+}

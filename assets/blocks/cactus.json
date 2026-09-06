@@ -1,0 +1,16 @@
+{
+  "id": "tesseris:cactus",
+  "texture": "cactus_side",
+  "faces": {
+    "top": "cactus_top",
+    "bottom": "cactus_top"
+  },
+  "material": "Soil",
+  "hardness": 0.5,
+  "chiselable": true,
+  "opaque": true,
+  "groundBlocks": [
+    "tesseris:sand",
+    "tesseris:red_sand"
+  ]
+}

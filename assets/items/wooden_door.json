@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:wooden_door",
+  "name": "wooden door",
+  "texture": "wooden_door_item_pixel",
+  "iconTexture": "wooden_door_item_pixel",
+  "block": "tesseris:wooden_door",
+  "kind": "Block",
+  "maxStack": 64
+}

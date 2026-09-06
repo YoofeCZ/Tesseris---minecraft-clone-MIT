@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:marble",
+  "texture": "marble",
+  "material": "Stone",
+  "hardness": 2.2,
+  "requiredTier": "Flint",
+  "chiselable": true,
+  "opaque": true
+}

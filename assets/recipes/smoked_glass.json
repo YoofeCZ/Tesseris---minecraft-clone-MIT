@@ -1,0 +1,16 @@
+{
+  "id": "smoked_glass",
+  "output": "tesseris:smoked_glass",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:glass",
+      "count": 4
+    },
+    {
+      "item": "tesseris:coal",
+      "count": 1
+    }
+  ]
+}

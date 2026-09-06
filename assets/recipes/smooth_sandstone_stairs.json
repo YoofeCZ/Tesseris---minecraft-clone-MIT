@@ -1,0 +1,12 @@
+{
+  "id": "smooth_sandstone_stairs",
+  "output": "tesseris:smooth_sandstone_stairs",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:smooth_sandstone",
+      "count": 3
+    }
+  ]
+}

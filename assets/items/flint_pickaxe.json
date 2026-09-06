@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:flint_pickaxe",
+  "name": "pazourkovy krumpac",
+  "texture": "re_flint_pickaxe_texture",
+  "iconTexture": "flint_pickaxe",
+  "kind": "Tool",
+  "tool": "Pickaxe",
+  "tier": "Flint",
+  "durability": 60,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "flint_pickaxe"
+}

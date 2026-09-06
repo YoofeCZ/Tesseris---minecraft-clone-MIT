@@ -1,0 +1,12 @@
+{
+  "id": "deepslate_bricks",
+  "output": "tesseris:deepslate_bricks",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:deepslate",
+      "count": 4
+    }
+  ]
+}

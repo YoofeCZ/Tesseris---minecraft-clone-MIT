@@ -1,0 +1,16 @@
+{
+  "id": "tesseris:maple_leaves",
+  "texture": "maple_leaves",
+  "material": "Wood",
+  "hardness": 0.2,
+  "chiselable": false,
+  "opaque": false,
+  "cutout": true,
+  "overhang": 0.45,
+  "shape": "Foliage",
+  "faces": {
+    "top": "maple_leaves",
+    "side": "maple_leaves_02",
+    "bottom": "maple_leaves_03"
+  }
+}

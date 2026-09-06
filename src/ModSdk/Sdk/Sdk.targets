@@ -1,0 +1,70 @@
+<Project>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+  <UsingTask TaskName="Tesseris.ModSdk.Tasks.ValidateModManifest"
+             AssemblyFile="$(MSBuildThisFileDirectory)..\tools\net8.0\Tesseris.ModSdk.Tasks.dll" />
+  <UsingTask TaskName="Tesseris.ModSdk.Tasks.CreateDeterministicArchive"
+             AssemblyFile="$(MSBuildThisFileDirectory)..\tools\net8.0\Tesseris.ModSdk.Tasks.dll" />
+
+  <PropertyGroup>
+    <TesserisModArtifactRoot Condition="'$(TesserisModArtifactRoot)' == ''">$(OutputPath)tesseris-mod\</TesserisModArtifactRoot>
+    <TesserisModOutputDirectory Condition="'$(TesserisModOutputDirectory)' == ''">$(TesserisModArtifactRoot)$(ModId)\</TesserisModOutputDirectory>
+    <TesserisModArchive Condition="'$(TesserisModArchive)' == ''">$(TesserisModArtifactRoot)$(ModId)-$(ModVersion).tmod</TesserisModArchive>
+  </PropertyGroup>
+
+  <Target Name="ValidateTesserisMod"
+          BeforeTargets="BuildTesserisMod"
+          Condition="'$(DesignTimeBuild)' != 'true'">
+    <Error Condition="'$(ModId)' == ''" Text="ModId is required." />
+    <Error Condition="'$(ModName)' == ''" Text="ModName is required." />
+    <Error Condition="'$(ModEntryType)' == ''" Text="ModEntryType is required." />
+    <Error Condition="!Exists('$(TesserisModManifest)')" Text="Tesseris mod manifest was not found: $(TesserisModManifest)" />
+    <ValidateModManifest ManifestPath="$(TesserisModManifest)"
+                         ModId="$(ModId)"
+                         ModName="$(ModName)"
+                         ModVersion="$(ModVersion)"
+                         ModApiVersion="$(ModApiVersion)"
+                         EntryAssembly="$(TargetFileName)"
+                         EntryType="$(ModEntryType)"
+                         ContentRoot="$(TesserisContentRoot)" />
+  </Target>
+
+  <Target Name="BuildTesserisMod"
+          AfterTargets="Build"
+          DependsOnTargets="ValidateTesserisMod"
+          Condition="'$(DesignTimeBuild)' != 'true'">
+    <ItemGroup>
+      <_TesserisManagedDependency Include="@(ReferenceCopyLocalPaths)"
+                                  Condition="'%(Extension)' == '.dll' and '%(Filename)' != 'Tesseris.ModApi' and '%(Filename)' != 'Tesseris.Loader.Abstractions'" />
+      <_TesserisContent Include="$(MSBuildProjectDirectory)\$(TesserisContentRoot)\**\*"
+                        Condition="Exists('$(MSBuildProjectDirectory)\$(TesserisContentRoot)')" />
+    </ItemGroup>
+
+    <RemoveDir Directories="$(TesserisModOutputDirectory)" />
+    <MakeDir Directories="$(TesserisModOutputDirectory)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(TesserisModOutputDirectory)" />
+    <Copy SourceFiles="@(_TesserisManagedDependency)"
+          DestinationFiles="@(_TesserisManagedDependency->'$(TesserisModOutputDirectory)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(TesserisModManifest)" DestinationFolder="$(TesserisModOutputDirectory)" />
+    <Copy SourceFiles="@(_TesserisContent)"
+          DestinationFiles="@(_TesserisContent->'$(TesserisModOutputDirectory)$(TesserisContentRoot)\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+    <CreateDeterministicArchive SourceDirectory="$(TesserisModOutputDirectory)"
+                                DestinationFile="$(TesserisModArchive)" />
+    <Message Importance="high" Text="Tesseris mod folder: $(TesserisModOutputDirectory)" />
+    <Message Importance="high" Text="Tesseris mod archive: $(TesserisModArchive)" />
+  </Target>
+
+  <Target Name="InstallTesserisMod" DependsOnTargets="Build;BuildTesserisMod">
+    <Error Condition="'$(TesserisModsDir)' == ''"
+           Text="TesserisModsDir is required for InstallTesserisMod. A normal build never installs into a game." />
+    <PropertyGroup>
+      <_TesserisInstallDirectory>$([System.IO.Path]::GetFullPath('$(TesserisModsDir)'))</_TesserisInstallDirectory>
+      <_TesserisInstallArchive>$(_TesserisInstallDirectory)\$(ModId)-$(ModVersion).tmod</_TesserisInstallArchive>
+    </PropertyGroup>
+    <MakeDir Directories="$(_TesserisInstallDirectory)" />
+    <Copy SourceFiles="$(TesserisModArchive)" DestinationFiles="$(_TesserisInstallArchive)" />
+    <Message Importance="high" Text="Installed Tesseris mod archive: $(_TesserisInstallArchive)" />
+  </Target>
+</Project>

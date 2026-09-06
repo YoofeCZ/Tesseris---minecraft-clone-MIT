@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:copper_ore",
+  "name": "měděná ruda",
+  "texture": "copper_ore",
+  "kind": "Block",
+  "block": "tesseris:copper_ore",
+  "maxStack": 64
+}

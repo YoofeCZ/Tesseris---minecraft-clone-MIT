@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:machine_frame",
+  "texture": "hypro_machine_frame",
+  "shape": "HytaleModel",
+  "model": "hytale/machine_frame",
+  "modelTextureWidth": 128,
+  "modelTextureHeight": 128,
+  "material": "Stone",
+  "hardness": 3.5,
+  "chiselable": false,
+  "opaque": true
+}

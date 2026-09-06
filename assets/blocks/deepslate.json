@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:deepslate",
+  "texture": "deepslate",
+  "material": "Stone",
+  "hardness": 3.0,
+  "chiselable": true,
+  "opaque": true
+}

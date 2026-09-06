@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:flower_red",
+  "texture": "flower_red",
+  "material": "Soil",
+  "hardness": 0.05,
+  "chiselable": false,
+  "opaque": false,
+  "solid": false,
+  "shape": "Cross",
+  "groundBlocks": [
+    "tesseris:grass"
+  ]
+}

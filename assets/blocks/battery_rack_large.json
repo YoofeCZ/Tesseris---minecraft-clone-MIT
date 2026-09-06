@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:battery_rack_large",
+  "texture": "hypro_battery_rack_large",
+  "shape": "HytaleModel",
+  "model": "hytale/battery_rack_large",
+  "modelTextureWidth": 512,
+  "modelTextureHeight": 512,
+  "material": "Stone",
+  "hardness": 3.5,
+  "chiselable": false,
+  "opaque": true
+}

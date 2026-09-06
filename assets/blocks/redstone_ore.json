@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:redstone_ore",
+  "texture": "redstone_ore",
+  "material": "Stone",
+  "requiredTier": "Iron",
+  "hardness": 4.5,
+  "dropItem": "tesseris:redstone_dust",
+  "dropCount": 4,
+  "chiselable": true,
+  "opaque": true
+}

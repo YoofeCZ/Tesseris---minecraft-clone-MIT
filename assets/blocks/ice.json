@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:ice",
+  "texture": "ice",
+  "material": "Glass",
+  "hardness": 0.5,
+  "chiselable": true,
+  "opaque": true
+}

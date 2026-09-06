@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:iron_ore",
+  "name": "železná ruda",
+  "texture": "iron_ore",
+  "kind": "Block",
+  "block": "tesseris:iron_ore",
+  "maxStack": 64
+}

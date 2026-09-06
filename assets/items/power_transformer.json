@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:power_transformer",
+  "name": "transformátor",
+  "texture": "power_transformer",
+  "kind": "Block",
+  "block": "tesseris:power_transformer",
+  "maxStack": 64
+}

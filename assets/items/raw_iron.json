@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:raw_iron",
+  "name": "surové železo",
+  "texture": "raw_iron",
+  "kind": "Material",
+  "tool": "None",
+  "tier": "None",
+  "durability": 0,
+  "maxStack": 64,
+  "burnSeconds": 0
+}

@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:loot_chest",
+  "name": "truhla s kořistí",
+  "iconTexture": "chest_front",
+  "kind": "Block",
+  "block": "tesseris:loot_chest"
+}

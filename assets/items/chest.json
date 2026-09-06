@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:chest",
+  "name": "truhla",
+  "iconTexture": "chest_front",
+  "kind": "Block",
+  "block": "tesseris:chest"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:deepslate_bricks_slab",
+  "texture": "deepslate_bricks",
+  "material": "Stone",
+  "hardness": 3.2,
+  "requiredTier": "Flint",
+  "pieces": 15,
+  "opaque": true,
+  "chiselable": false
+}

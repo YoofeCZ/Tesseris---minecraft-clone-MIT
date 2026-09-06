@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:diorite_slab",
+  "texture": "diorite",
+  "material": "Stone",
+  "hardness": 2,
+  "requiredTier": "Flint",
+  "pieces": 15,
+  "opaque": true,
+  "chiselable": false
+}

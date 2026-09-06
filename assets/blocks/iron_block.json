@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:iron_block",
+  "texture": "iron_block",
+  "material": "Stone",
+  "requiredTier": "Stone",
+  "hardness": 4,
+  "chiselable": true,
+  "opaque": true
+}

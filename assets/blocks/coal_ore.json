@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:coal_ore",
+  "texture": "coal_ore",
+  "material": "Stone",
+  "requiredTier": "Stone",
+  "hardness": 3.0,
+  "dropItem": "tesseris:coal",
+  "chiselable": true,
+  "opaque": true
+}

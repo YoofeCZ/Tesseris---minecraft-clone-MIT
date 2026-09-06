@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:wind_turbine",
+  "name": "větrná turbína",
+  "iconTexture": "hypro_wind_turbine_icon",
+  "kind": "Block",
+  "block": "tesseris:wind_turbine"
+}

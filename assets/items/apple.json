@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:apple",
+  "name": "jablko",
+  "texture": "apple",
+  "kind": "Material",
+  "maxStack": 64,
+  "burnSeconds": 0
+}

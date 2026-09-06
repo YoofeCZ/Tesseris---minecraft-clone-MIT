@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:iron_helmet",
+  "name": "železná přilba",
+  "texture": "iron_helmet",
+  "kind": "Armour",
+  "slot": "Helmet",
+  "tier": "Iron",
+  "durability": 160,
+  "protection": 0.15,
+  "maxStack": 1
+}

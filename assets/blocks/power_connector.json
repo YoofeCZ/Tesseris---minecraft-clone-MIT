@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:power_connector",
+  "texture": "power_connector",
+  "material": "Stone",
+  "hardness": 2.5,
+  "chiselable": false,
+  "opaque": true
+}

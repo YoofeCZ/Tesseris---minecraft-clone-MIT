@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:small_stone",
+  "name": "kamínek",
+  "texture": "small_stone",
+  "kind": "Block",
+  "block": "tesseris:small_stone",
+  "tool": "None",
+  "tier": "None",
+  "durability": 0,
+  "maxStack": 64,
+  "burnSeconds": 0
+}

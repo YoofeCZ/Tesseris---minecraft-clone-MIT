@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:oxidized_copper",
+  "texture": "oxidized_copper",
+  "material": "Stone",
+  "requiredTier": "Stone",
+  "hardness": 3,
+  "chiselable": true,
+  "opaque": true
+}

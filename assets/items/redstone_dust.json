@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:redstone_dust",
+  "name": "redstone prach",
+  "texture": "redstone_dust",
+  "kind": "Material",
+  "maxStack": 64
+}

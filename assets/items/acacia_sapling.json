@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:acacia_sapling",
+  "name": "akĂˇciovĂˇ sazenice",
+  "texture": "acacia_sapling",
+  "kind": "Block",
+  "block": "tesseris:acacia_sapling",
+  "maxStack": 64,
+  "burnSeconds": 5
+}

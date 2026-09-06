@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:diamond_axe",
+  "name": "diamantovy sekera",
+  "texture": "re_diamond_axe_texture",
+  "iconTexture": "diamond_axe",
+  "kind": "Tool",
+  "tool": "Axe",
+  "tier": "Diamond",
+  "durability": 1562,
+  "maxStack": 1,
+  "burnSeconds": 0,
+  "model": "diamond_axe"
+}

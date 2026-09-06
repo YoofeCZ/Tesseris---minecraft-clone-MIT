@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:diamond_boots",
+  "name": "diamantové boty",
+  "texture": "diamond_boots",
+  "kind": "Armour",
+  "slot": "Boots",
+  "tier": "Diamond",
+  "durability": 304,
+  "protection": 0.28,
+  "maxStack": 1
+}

@@ -1,0 +1,12 @@
+{
+  "id": "polished_granite_slab",
+  "output": "tesseris:polished_granite_slab",
+  "count": 2,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:polished_granite",
+      "count": 1
+    }
+  ]
+}

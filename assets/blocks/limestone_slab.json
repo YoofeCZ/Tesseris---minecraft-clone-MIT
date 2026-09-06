@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:limestone_slab",
+  "texture": "limestone",
+  "material": "Stone",
+  "hardness": 1.6,
+  "requiredTier": "Flint",
+  "pieces": 15,
+  "opaque": true,
+  "chiselable": false
+}

@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:cobblestone_slab",
+  "name": "deska z lĂˇmanĂ©ho kamene",
+  "kind": "Block",
+  "block": "tesseris:cobblestone_slab",
+  "maxStack": 64
+}

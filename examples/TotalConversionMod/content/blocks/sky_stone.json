@@ -1,0 +1,10 @@
+{
+  "id": "total_conversion:sky_stone",
+  "texture": "total_conversion:sky_stone",
+  "material": "Stone",
+  "hardness": 3.0,
+  "opaque": true,
+  "solid": true,
+  "dropItem": "total_conversion:sky_stone",
+  "dropCount": 1
+}

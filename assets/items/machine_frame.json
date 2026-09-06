@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:machine_frame",
+  "name": "strojní rám",
+  "iconTexture": "hypro_machine_frame_icon",
+  "kind": "Block",
+  "block": "tesseris:machine_frame"
+}

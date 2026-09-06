@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:smooth_sandstone_slab",
+  "texture": "smooth_sandstone",
+  "material": "Stone",
+  "requiredTier": "Flint",
+  "hardness": 0.8,
+  "pieces": 15,
+  "opaque": true,
+  "chiselable": false
+}

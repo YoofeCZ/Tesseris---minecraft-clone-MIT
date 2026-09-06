@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:raw_copper",
+  "name": "surová měď",
+  "texture": "raw_copper",
+  "kind": "Material",
+  "maxStack": 64
+}

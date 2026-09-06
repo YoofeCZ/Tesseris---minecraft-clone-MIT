@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:overhead_wire_coil",
+  "name": "cívka venkovního vodiče",
+  "texture": "overhead_wire_coil",
+  "kind": "Material",
+  "maxStack": 16
+}

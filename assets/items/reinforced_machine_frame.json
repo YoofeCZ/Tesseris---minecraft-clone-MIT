@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:reinforced_machine_frame",
+  "name": "zesílený strojní rám",
+  "iconTexture": "hypro_reinforced_machine_frame_icon",
+  "kind": "Block",
+  "block": "tesseris:reinforced_machine_frame"
+}

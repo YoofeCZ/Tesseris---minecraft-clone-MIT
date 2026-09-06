@@ -1,0 +1,15 @@
+{
+  "id": "tesseris:acacia_sapling",
+  "texture": "acacia_sapling",
+  "material": "Soil",
+  "hardness": 0.05,
+  "chiselable": false,
+  "opaque": false,
+  "solid": false,
+  "shape": "Cross",
+  "groundBlocks": [
+    "tesseris:grass",
+    "tesseris:dirt",
+    "tesseris:dry_grass"
+  ]
+}

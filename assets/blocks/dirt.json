@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:dirt",
+  "texture": "dirt",
+  "material": "Soil",
+  "hardness": 0.5,
+  "chiselable": true,
+  "opaque": true
+}

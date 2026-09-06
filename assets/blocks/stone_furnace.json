@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:stone_furnace",
+  "texture": "stone_furnace",
+  "shape": "HytaleModel",
+  "model": "hytale/stone_furnace",
+  "modelTextureWidth": 128,
+  "modelTextureHeight": 128,
+  "material": "Stone",
+  "hardness": 3.5,
+  "chiselable": false,
+  "opaque": true
+}

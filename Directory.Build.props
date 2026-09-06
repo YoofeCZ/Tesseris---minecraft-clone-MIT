@@ -1,0 +1,34 @@
+<Project>
+
+  <!--
+    Sdílené nastavení pro všechny projekty. Záměrně obsahuje jen to, co plyne ze zadání:
+    cíl net8.0 a tvrdý požadavek "build i test bez warningů".
+
+    Vědomě zde NENÍ:
+      * <Platforms>       — `dotnet sln add` si hodnotu zapeče do .sln natvrdo a pozdější
+                            odebrání se už neprojeví; výstup pak končí v bin\x64\... (ověřeno).
+      * AnalysisLevel     — necháváme výchozí úroveň SDK. Zvednutím by se nasypala CA pravidla,
+                            která by se hned musela zalepovat výjimkami; zadání chce nula
+                            warningů, ne co nejvíc zapnutých pravidel.
+      * AllowUnsafeBlocks — nepotřebujeme. Nahrávání dat do GL bufferů i textur jde přes
+                            přetížení s polem (ověřeno kompilací), `fixed` není nutný.
+      * InvariantGlobalization — mění sémantiku formátování v celém runtime. Kód si invariantní
+                            kulturu vynucuje sám tam, kde na ní záleží, aby to bylo vidět v místě
+                            použití a šlo to otestovat.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <!--
+      Cíl je net8.0, ale runtime .NET 8 nemusí být nainstalovaný — na stroji, kde port
+      vznikal, byl jen .NET 10. Bez tohohle by `dotnet run` skončil hláškou o chybějícím
+      frameworku a musela by se ručně předávat proměnná DOTNET_ROLL_FORWARD.
+      Testy si roll-forward dělaly samy, spustitelná hra ne.
+    -->
+    <RollForward>Major</RollForward>
+  </PropertyGroup>
+
+</Project>

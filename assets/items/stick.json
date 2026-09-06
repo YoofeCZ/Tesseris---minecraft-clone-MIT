@@ -1,0 +1,12 @@
+{
+  "id": "tesseris:stick",
+  "name": "klacek",
+  "texture": "stick",
+  "kind": "Block",
+  "block": "tesseris:stick",
+  "tool": "None",
+  "tier": "None",
+  "durability": 0,
+  "maxStack": 64,
+  "burnSeconds": 5
+}

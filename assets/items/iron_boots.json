@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:iron_boots",
+  "name": "železné boty",
+  "texture": "iron_boots",
+  "kind": "Armour",
+  "slot": "Boots",
+  "tier": "Iron",
+  "durability": 160,
+  "protection": 0.15,
+  "maxStack": 1
+}

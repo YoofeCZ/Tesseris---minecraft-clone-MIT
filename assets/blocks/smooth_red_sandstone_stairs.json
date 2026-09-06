@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:smooth_red_sandstone_stairs",
+  "texture": "smooth_red_sandstone",
+  "material": "Stone",
+  "requiredTier": "Flint",
+  "hardness": 0.8,
+  "pieces": 63,
+  "opaque": true,
+  "chiselable": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": "tesseris:chiseled_red_sandstone",
+  "texture": "chiseled_red_sandstone",
+  "material": "Stone",
+  "requiredTier": "Flint",
+  "hardness": 0.9,
+  "chiselable": true,
+  "opaque": true
+}

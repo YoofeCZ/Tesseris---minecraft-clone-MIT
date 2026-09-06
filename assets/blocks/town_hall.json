@@ -1,0 +1,11 @@
+{
+  "id": "tesseris:town_hall",
+  "texture": "bricks",
+  "faces": {
+    "top": "red_roof_tiles"
+  },
+  "material": "Stone",
+  "hardness": 4.0,
+  "chiselable": false,
+  "opaque": true
+}

@@ -1,0 +1,9 @@
+{
+  "output": "ruby_pickaxe",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "ruby", "count": 3 },
+    { "item": "tesseris:stick", "count": 2 }
+  ]
+}

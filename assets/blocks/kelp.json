@@ -1,0 +1,21 @@
+{
+  "id": "tesseris:kelp",
+  "texture": "kelp_middle",
+  "faces": {
+    "top": "kelp_top",
+    "bottom": "kelp_bottom"
+  },
+  "material": "Soil",
+  "hardness": 0.05,
+  "chiselable": false,
+  "opaque": false,
+  "solid": false,
+  "aquatic": true,
+  "shape": "Cross",
+  "cutout": true,
+  "groundBlocks": [
+    "tesseris:sand",
+    "tesseris:grass",
+    "tesseris:dry_grass"
+  ]
+}

@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Tesseris.Launcher</RootNamespace>
+    <AssemblyName>Tesseris.Launcher</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TesserisRuntimePayloadPath)' != ''">
+    <EmbeddedResource Include="$(TesserisRuntimePayloadPath)" LogicalName="Tesseris.RuntimePayload.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Tesseris.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Loader\Tesseris.Loader.csproj" />
+    <ProjectReference Include="..\Loader.Transforms\Tesseris.Loader.Transforms.csproj" />
+    <ProjectReference Include="..\Loader.Abstractions\Tesseris.Loader.Abstractions.csproj" />
+    <ProjectReference Include="..\ModApi\Tesseris.ModApi.csproj" />
+    <!-- Build-order/distribution dependency only. Game is deliberately absent from the compiler references. -->
+    <ProjectReference Include="..\Game\Game.csproj" ReferenceOutputAssembly="false" PrivateAssets="all" />
+  </ItemGroup>
+
+  <Target Name="CopyGameDistribution" AfterTargets="Build"
+          Condition="'$(TesserisSkipGameDistribution)' != 'true'">
+    <ItemGroup>
+      <GameRuntimeFiles Include="..\Game\bin\$(Configuration)\$(TargetFramework)\**\*"
+                        Exclude="..\Game\bin\$(Configuration)\$(TargetFramework)\Tesseris.Launcher*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(GameRuntimeFiles)"
+          DestinationFiles="@(GameRuntimeFiles->'$(OutDir)%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+  </Target>
+
+</Project>

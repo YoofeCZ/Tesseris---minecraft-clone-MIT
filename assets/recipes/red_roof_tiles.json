@@ -1,0 +1,12 @@
+{
+  "id": "red_roof_tiles",
+  "output": "tesseris:red_roof_tiles",
+  "count": 4,
+  "smelting": false,
+  "inputs": [
+    {
+      "item": "tesseris:bricks",
+      "count": 3
+    }
+  ]
+}

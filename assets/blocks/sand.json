@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:sand",
+  "texture": "sand",
+  "material": "Sand",
+  "hardness": 0.4,
+  "chiselable": true,
+  "opaque": true
+}

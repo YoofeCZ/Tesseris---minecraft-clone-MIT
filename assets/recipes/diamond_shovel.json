@@ -1,0 +1,10 @@
+{
+  "id": "diamond_shovel",
+  "output": "tesseris:diamond_shovel",
+  "count": 1,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:diamond", "count": 1 },
+    { "item": "tesseris:stick", "count": 2 }
+  ]
+}

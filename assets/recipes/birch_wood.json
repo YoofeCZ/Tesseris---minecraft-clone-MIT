@@ -1,0 +1,9 @@
+{
+  "id": "birch_wood",
+  "output": "tesseris:birch_wood",
+  "count": 3,
+  "smelting": false,
+  "inputs": [
+    { "item": "tesseris:birch_log", "count": 4 }
+  ]
+}

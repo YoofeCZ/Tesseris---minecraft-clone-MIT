@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:quarry",
+  "name": "těžební stroj",
+  "iconTexture": "hypro_quarry_icon",
+  "kind": "Block",
+  "block": "tesseris:quarry"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "smelt_copper",
+  "type": "Smelting",
+  "output": "tesseris:copper_ingot",
+  "count": 1,
+  "inputs": [ { "item": "tesseris:raw_copper", "count": 1 } ]
+}

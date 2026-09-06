@@ -1,0 +1,13 @@
+{
+  "id": "tesseris:border_torch",
+  "texture": "hypro_border_torch",
+  "shape": "HytaleModel",
+  "model": "hytale/border_torch",
+  "modelTextureWidth": 32,
+  "modelTextureHeight": 32,
+  "material": "Stone",
+  "hardness": 1.0,
+  "chiselable": false,
+  "opaque": false,
+  "cutout": true
+}

@@ -1,0 +1,9 @@
+{
+  "id": "smelt_iron",
+  "output": "tesseris:iron_ingot",
+  "count": 1,
+  "smelting": true,
+  "inputs": [
+    { "item": "tesseris:raw_iron", "count": 1 }
+  ]
+}

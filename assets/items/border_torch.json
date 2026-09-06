@@ -1,0 +1,7 @@
+{
+  "id": "tesseris:border_torch",
+  "name": "hraniční pochodeň",
+  "iconTexture": "hypro_border_torch_icon",
+  "kind": "Block",
+  "block": "tesseris:border_torch"
+}

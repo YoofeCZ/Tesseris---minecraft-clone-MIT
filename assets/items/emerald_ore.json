@@ -1,0 +1,8 @@
+{
+  "id": "tesseris:emerald_ore",
+  "name": "smaragdová ruda",
+  "texture": "emerald_ore",
+  "kind": "Block",
+  "block": "tesseris:emerald_ore",
+  "maxStack": 64
+}

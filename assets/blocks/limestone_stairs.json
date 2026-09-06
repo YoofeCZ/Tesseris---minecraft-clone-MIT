@@ -1,0 +1,10 @@
+{
+  "id": "tesseris:limestone_stairs",
+  "texture": "limestone",
+  "material": "Stone",
+  "hardness": 1.6,
+  "requiredTier": "Flint",
+  "pieces": 63,
+  "opaque": true,
+  "chiselable": false
+}

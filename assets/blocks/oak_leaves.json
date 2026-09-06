@@ -1,0 +1,16 @@
+{
+  "id": "tesseris:oak_leaves",
+  "texture": "oak_leaves",
+  "material": "Wood",
+  "hardness": 0.2,
+  "chiselable": false,
+  "opaque": false,
+  "cutout": true,
+  "overhang": 0.45,
+  "shape": "Foliage",
+  "faces": {
+    "top": "oak_leaves",
+    "side": "oak_leaves_02",
+    "bottom": "oak_leaves_03"
+  }
+}
